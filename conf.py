@@ -17,6 +17,9 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('../lava/lava'))
+sys.path.insert(0, os.path.abspath('../lava-dl'))
+sys.path.insert(0, os.path.abspath('../lava-dnf'))
+sys.path.insert(0, os.path.abspath('../lava-optimization'))
 
 
 # -- Project information -----------------------------------------------------
