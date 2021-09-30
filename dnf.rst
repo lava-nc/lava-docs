@@ -36,27 +36,31 @@ Key features
 ------------
 
 Building DNF architectures
-    • Based on spiking neurons
-    • DNF dimensionality support for 0D, 1D, 2D, and 3D
-    • Recurrent connectivity based on kernel functions
-    • Forward connectivity to connect multiple DNFs
-    • Structured input from spike generators
+
+#. Based on spiking neurons
+#. DNF dimensionality support for 0D, 1D, 2D, and 3D
+#. Recurrent connectivity based on kernel functions
+#. Forward connectivity to connect multiple DNFs
+#. Structured input from spike generators
 
 Examples demonstrating basic DNF regimes and instabilities
-    • Detection of input
-    • Selection of input
-    • Working memory of input
-    • Neural oscillator
+
+#. Detection of input
+#. Selection of input
+#. Working memory of input
+#. Neural oscillator
 
 Infrastructure
-    • Sensor and data input/output
-    • Plotting
+
+#. Sensor and data input/output
+#. Plotting
 
 
 Example
 -------
 
 .. code-block:: python
+
    from lava.lib.dnf.populations import Population
    from lava.lib.dnf.kernels import SelectiveKernel
    from lava.lib.dnf.connect import connect
