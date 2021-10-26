@@ -18,9 +18,9 @@ def set_properties(project):
     project.set_property("dir_source_main_scripts", "../scripts")
     project.set_property("dir_docs", "./")
 
-    project.set_property("sphinx_config_path", "docs")
-    project.set_property("sphinx_source_dir", "docs")
-    project.set_property("sphinx_output_dir", "docs/_build")
+    project.set_property("sphinx_config_path", "./")
+    project.set_property("sphinx_source_dir", "./")
+    project.set_property("sphinx_output_dir", "./_build")
     project.set_property("sphinx_doc_author", "Lava Project")
     project.set_property("sphinx_doc_builder", "html")
     project.set_property("sphinx_project_name", project.name)
