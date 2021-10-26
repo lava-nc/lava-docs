@@ -109,57 +109,103 @@ Lava is open to modification and extension to third-party libraries like Nengo, 
 
 All of Lava's core APIs and higher-level components are released, by default, with permissive BSD 3 licenses in order to encourage the broadest possible community contribution.  Lower-level Magma components needed for mapping processes to neuromorphic backends are generally released with more restrictive LGPL-2.1 licensing to discourage commercial proprietary forks of these technologies.  The specific components of Magma needed to compile processes specifically to Intel Loihi chips remains proprietary to Intel and is not provided through this GitHub site (see below).  Similar Magma-layer code for other future commercial neuromorphic platforms likely will also remain proprietary.
 
-Getting started
+Getting Started
 ===============
 
-Install instructions
---------------------
+Cloning Lava and Running from Source
+------------------------------------
 
-Installing or cloning Lava
+We highly recommend cloning the repository and using pybuilder to setup lava. You will need to install pybuilder for the same.
+
+Open a python terminal and run based on the OS you are on:
+
+[Linux/MacOS]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+- cd ~
+- python3 -m venv python3_venv
+- source python3_venv/bin/activate
+- pip install -U pip
+- git clone git@github.com:lava-nc/lava.git
+- cd lava
+- pip install -r build-requirements.txt
+- pip install -r requirements.txt
+- export PYTHONPATH=~/lava
+- pyb -E unit
 
-New Lava releases will be published via GitHub releases and can be installed after downloading.
+[Windows]
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+- cd %HOMEPATH%
+- python3 -m venv python3_venv
+- source python3_venv\bin\activate.bat
+- pip install -U pip
+- git clone git@github.com:lava-nc/lava.git
+- cd lava
+- pip install -r build-requirements.txt
+- pip install -r requirements.txt
+- set PYTHONPATH=%HOMEPATH%\lava
+- pyb -E unit
+
+You should expect the following output after running the unit tests:
 
 .. code-block:: console
 
 
-      pip install lava-0.0.1.tar.gz
-      pip install lava-lib-0.0.1.tar.gz
+      PyBuilder version 0.13.3
+      Build started at 2021-10-25 13:32:02
+      ------------------------------------------------------------
+      [INFO]  Activated environments: unit
+      [INFO]  Building Lava version 0.1.0
+      ......  PyBuilder Logs ...
+      [INFO]  Running unit tests
+      [INFO]  Executing unit tests from Python modules in /home/user/lava/lava/tests
+      [INFO]  Executed 72 unit tests
+      [INFO]  All unit tests passed.
 
-If you would like to contribute to the source code or work with the source directly, you can also clone the repository.
 
-.. code-block:: console
+[Alternative] Installing Lava from Binaries
+-------------------------------------------
 
+If you only need the lava package in your python environment, we will publish
+Lava releases via
+[GitHub Releases](https://github.com/lava-nc/lava/releases). Please download
+the package and install it.
 
-      git clone git@github.com:lava-nc/lava.git
-      pip install -e lava/lava
+Open a python terminal and run:
 
-      git clone git@github.com:lava-nc/lava-lib.git
-      # [Optional]
-      pip install -e lava-lib/dnf
-      pip install -e lava-lib/dl
-      pip install -e lava-lib/optimization
+[Windows/MacOS/Linux]
+^^^^^^^^^^^^^^^^^^^^^
+- python3 -m venv python3_venv
+- pip install -U pip
+- pip install lava-0.1.0.tar.gz
 
-This will allow you to run Lava on your own local CPU or GPU.
 
 Running Lava on Intel Loihi
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===========================
 
-Intel's neuromorphic Loihi 1 or 2 research systems are currently not available commercially. Developers interested in using Lava with Loihi systems, need to join the Intel Neuromorphic Research Community (INRC). Once a member of the INRC, developers will gain access to cloud-hosted Loihi systems or are able to obtain physical Loihi systems on a loan basis. In addition, Intel will provide further proprietary components of the magma library which enable compiling processes for Loihi systems that need to be installed into the same *Lava* namespace as in this example:
+Intel's neuromorphic Loihi 1 or 2 research systems are currently not available
+commercially. Developers interested in using Lava with Loihi systems, need to
+join the Intel Neuromorphic Research Community (INRC). Once a member of the
+INRC, developers will gain access to cloud-hosted Loihi systems or are able
+to obtain physical Loihi systems on a loan basis. In addition, Intel will
+provide further proprietary components of the magma library which enable
+compiling processes for Loihi systems that need to be installed into the
+same Lava namespace.
 
-.. code-block:: console
+Login to Intel External vLab Machines. Instructions were sent to you during
+your INRC Account Setup. If you do not know/remember the login
+instructions, email: nrc_support@intel-research.net
 
+- Login to INRC VM with your credentials
+- Follow the instructions to Install or Clone Lava
+- cd /nfs/ncl/releases/lava/0.1.0
+- pip install lava-nc-0.1.0.tar.gz
 
-      pip install /nfs/ncl/releases/lava/0.0.1/lava-nc-0.0.1.tar.gz
-      pip install /nfs/ncl/releases/lava/0.0.1/lava-nc-lib-0.0.1.tar.gz
-
-Please email inrc_interest@intel.com to request a research proposal template to apply for INRC membership.
 
 Coding example
---------------
+==============
 
 Building a simple feed-forward network
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------
 
 .. code-block:: python
 
@@ -186,7 +232,7 @@ Building a simple feed-forward network
            condition=rcnd.RunSteps(1000, blocking=True))
 
 Creating a custom Lava process
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 A process has input and output ports to interact with other processes, internal variables may have different behavioral implementations in different programming languages or for different HW platforms.
 
@@ -219,7 +265,7 @@ A process has input and output ports to interact with other processes, internal 
            self.vth = Var(shape=(1,), init=kwargs.pop('vth', 1))
 
 Creating process models
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 Process models are used to provide different behavioral models of a process. This Python model implements the LIF process, the Loihi synchronization protocol and requires a CPU compute resource to run.
 
