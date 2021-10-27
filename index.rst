@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Lava Documentation
-==================
+Lava Software Framework
+=======================
 
 .. role:: raw-html-m2r(raw)
    :format: html
@@ -121,34 +121,39 @@ Open a python terminal and run based on the OS you are on:
 
 [Linux/MacOS]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-- cd ~
-- python3 -m venv python3_venv
-- source python3_venv/bin/activate
-- pip install -U pip
-- git clone git@github.com:lava-nc/lava.git
-- cd lava
-- pip install -r build-requirements.txt
-- pip install -r requirements.txt
-- export PYTHONPATH=~/lava
-- pyb -E unit
+
+.. code-block:: bash
+
+   cd ~
+   python3 -m venv python3_venv
+   source python3_venv/bin/activate
+   pip install -U pip
+   git clone git@github.com:lava-nc/lava.git
+   cd lava
+   pip install -r build-requirements.txt
+   pip install -r requirements.txt
+   export PYTHONPATH=~/lava
+   pyb -E unit
 
 [Windows]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-- cd %HOMEPATH%
-- python3 -m venv python3_venv
-- source python3_venv\bin\activate.bat
-- pip install -U pip
-- git clone git@github.com:lava-nc/lava.git
-- cd lava
-- pip install -r build-requirements.txt
-- pip install -r requirements.txt
-- set PYTHONPATH=%HOMEPATH%\lava
-- pyb -E unit
+
+.. code-block:: console
+
+   cd %HOMEPATH%
+   python3 -m venv python3_venv
+   source python3_venv\bin\activate.bat
+   pip install -U pip
+   git clone git@github.com:lava-nc/lava.git
+   cd lava
+   pip install -r build-requirements.txt
+   pip install -r requirements.txt
+   set PYTHONPATH=%HOMEPATH%\lava
+   pyb -E unit
 
 You should expect the following output after running the unit tests:
 
 .. code-block:: console
-
 
       PyBuilder version 0.13.3
       Build started at 2021-10-25 13:32:02
@@ -166,17 +171,19 @@ You should expect the following output after running the unit tests:
 -------------------------------------------
 
 If you only need the lava package in your python environment, we will publish
-Lava releases via
-[GitHub Releases](https://github.com/lava-nc/lava/releases). Please download
-the package and install it.
+Lava releases via `GitHub Releases<https://github.com/lava-nc/lava/releases>`.
+Please download the package and install it.
 
 Open a python terminal and run:
 
 [Windows/MacOS/Linux]
 ^^^^^^^^^^^^^^^^^^^^^
-- python3 -m venv python3_venv
-- pip install -U pip
-- pip install lava-0.1.0.tar.gz
+
+.. code-block:: console
+
+   python3 -m venv python3_venv
+   pip install -U pip
+   pip install lava-nc-0.1.0.tar.gz
 
 
 Running Lava on Intel Loihi
@@ -195,50 +202,54 @@ Login to Intel External vLab Machines. Instructions were sent to you during
 your INRC Account Setup. If you do not know/remember the login
 instructions, email: nrc_support@intel-research.net
 
-- Login to INRC VM with your credentials
-- Follow the instructions to Install or Clone Lava
-- cd /nfs/ncl/releases/lava/0.1.0
-- pip install lava-nc-0.1.0.tar.gz
+.. code-block:: console
 
+   # Login to INRC VM with your credentials
+   # Follow the instructions to Install or Clone Lava
+   cd /nfs/ncl/releases/lava/0.1.0
+   pip install lava-nc-0.1.0.tar.gz
+
+
+Please email inrc_interest@intel.com to request a research proposal template to apply for INRC membership.
 
 Coding example
-==============
+--------------
 
 Building a simple feed-forward network
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
 
    # Instantiate Lava processes to build network
-   import numpy as np
-   from lava.proc.io import SpikeInput, SpikeOutput
-   from lava.proc import Dense, LIF
+   from lava.proc.dense.process import Dense
+   from lava.proc.lif.process import LIF
 
-   si = SpikeInput(path='source_data_path', shape=(28, 28))
-   dense = Dense(shape=(10, 784),
-                 weights=np.random.random((10, 784)))
-   lif = LIF(shape=(10,), vth=10)
-   so = SpikeOutput(path='result_data_path', shape=(10,))
+   lif1 = LIF()
+   dense = Dense()
+   lif2 = LIF()
 
    # Connect processes via their directional input and output ports
-   si.out_ports.s_out.reshape(784, 1).connect(dense.in_ports.s_in)
-   dense.out_ports.a_out.connect(lif.in_ports.a_in)
-   lif.out_ports.s_out.connect(so.in_ports.s_in)
+   lif1.out_ports.s_out.connect(self.dense.in_ports.s_in)
+   dense.out_ports.a_out.connect(self.lif2.in_ports.a_in)
 
-   # Execute processes for fixed number of steps on Loihi 2 (by running any of them)
-   from lava.magma import run_configs as rcfg
-   from lava.magma import run_conditions as rcnd
-   lif.run(run_cfg=rcfg.Loihi2HwCfg(),
-           condition=rcnd.RunSteps(1000, blocking=True))
+   # Execute process lif1 and all processes connected to it for fixed number of steps
+   from lava.magma.core.run_conditions import RunSteps
+   from lava.magma.core.run_configs import RunConfig
+   lif1.run(condition=RunSteps(num_steps=10), run_cfg=SimpleRunConfig(
+            sync_domains=[]))
+   lif1.stop()
 
 Creating a custom Lava process
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A process has input and output ports to interact with other processes, internal variables may have different behavioral implementations in different programming languages or for different HW platforms.
 
 .. code-block:: python
 
-   from lava.magma import AbstractProcess, InPort, Var, OutPort
+   from lava.magma.core.process.process import AbstractProcess
+   from lava.magma.core.process.variable import Var
+   from lava.magma.core.process.ports.ports import InPort, OutPort
+
 
    class LIF(AbstractProcess):
        """Leaky-Integrate-and-Fire neural process with activation input and spike
@@ -246,90 +257,85 @@ A process has input and output ports to interact with other processes, internal 
 
        Realizes the following abstract behavior:
        u[t] = u[t-1] * (1-du) + a_in
-       v[t] = v[t-1] * (1-dv) + u[t] + b
+       v[t] = v[t-1] * (1-dv) + u[t] + bias
        s_out = v[t] > vth
        v[t] = v[t] - s_out*vth
        """
        def __init__(self, **kwargs):
-           super(AbstractProcess, self).__init__(kwargs)
-           shape = kwargs.pop("shape", (1,))
-           # Declare input and output ports
-           self.a_in = InPort(shape=shape)
-           self.s_out = OutPort(shape=shape)
-           # Declare internal variables
-           self.u = Var(shape=shape, init=0)
-           self.v = Var(shape=shape, init=0)
-           self.decay_u = Var(shape=(1,), init=kwargs.pop('du', 1))
-           self.decay_v = Var(shape=(1,), init=kwargs.pop('dv', 0))
-           self.b = Var(shape=shape, init=kwargs.pop('b', 0))
-           self.vth = Var(shape=(1,), init=kwargs.pop('vth', 1))
+          super().__init__(**kwargs)
+          shape = kwargs.get("shape", (1,))
+          self.a_in = InPort(shape=shape)
+          self.s_out = OutPort(shape=shape)
+          self.u = Var(shape=shape, init=0)
+          self.v = Var(shape=shape, init=0)
+          self.du = Var(shape=(1,), init=kwargs.pop("du", 0))
+          self.dv = Var(shape=(1,), init=kwargs.pop("dv", 0))
+          self.bias = Var(shape=shape, init=kwargs.pop("b", 0))
+          self.vth = Var(shape=(1,), init=kwargs.pop("vth", 10))
 
 Creating process models
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Process models are used to provide different behavioral models of a process. This Python model implements the LIF process, the Loihi synchronization protocol and requires a CPU compute resource to run.
 
 .. code-block:: python
 
    import numpy as np
-   from lava import magma as mg
-   from lava.magma.resources import CPU
-   from lava.magma.sync_protocol import LoihiProtocol, DONE
-   from lava.proc import LIF
-   from lava.magma.pymodel import AbstractPyProcessModel, LavaType
-   from lava.magma.pymodel import InPortVecDense as InPort
-   from lava.magma.pymodel import OutPortVecDense as OutPort
+   from lava.magma.core.sync.protocols.loihi_protocol import LoihiProtocol
+   from lava.magma.core.model.py.ports import PyInPort, PyOutPort
+   from lava.magma.core.model.py.type import LavaPyType
+   from lava.magma.core.resources import CPU
+   from lava.magma.core.decorator import implements, requires
+   from lava.magma.core.model.py.model import PyLoihiProcessModel
+   from lava.proc.lif.process import LIF
 
-   @mg.implements(proc=LIF, protocol=LoihiProtocol)
-   @mg.requires(CPU)
-   class PyLifModel(AbstractPyProcessModel):
-       # Declare port implementation
-       a_in: InPort =     LavaType(InPort, np.int16, precision=16)
-       s_out: OutPort =   LavaType(OutPort, bool, precision=1)
-       # Declare variable implementation
-       u: np.ndarray =    LavaType(np.ndarray, np.int32, precision=24)
-       v: np.ndarray =    LavaType(np.ndarray, np.int32, precision=24)
-       b: np.ndarray =    LavaType(np.ndarray, np.int16, precision=12)
-       du: int =          LavaType(int, np.uint16, precision=12)
-       dv: int =          LavaType(int, np.uint16, precision=12)
-       vth: int =         LavaType(int, int, precision=8)
+
+   @implements(proc=LIF, protocol=LoihiProtocol)
+   @requires(CPU)
+   class PyLifModel(PyLoihiProcessModel):
+       a_in: PyInPort = LavaPyType(PyInPort.VEC_DENSE, np.int16, precision=16)
+       s_out: PyOutPort = LavaPyType(PyOutPort.VEC_DENSE, bool, precision=1)
+       u: np.ndarray = LavaPyType(np.ndarray, np.int32, precision=24)
+       v: np.ndarray = LavaPyType(np.ndarray, np.int32, precision=24)
+       bias: np.ndarray = LavaPyType(np.ndarray, np.int16, precision=12)
+       du: int = LavaPyType(int, np.uint16, precision=12)
+       dv: int = LavaPyType(int, np.uint16, precision=12)
+       vth: int = LavaPyType(int, int, precision=8)
 
        def run_spk(self):
-           """Executed during spiking phase of synchronization protocol."""
-           # Decay current
-           self.u[:] = self.u * (1 - self.du)
-           # Receive input activation via channel and accumulate
-           activation = self.a_in.recv()
-           self.u[:] += activation
-           self.v[:] = self.v * (1 - self.dv) + self.u + self.b
-           # Generate output spikes and send to receiver
-           spikes = self.v > self.vth
-           self.v[spikes] -= self.vth
-           if np.any(spikes):
-               self.s_out.send(spikes)
+           self.u[:] = self.u * ((2 ** 12 - self.du) // 2 ** 12)
+           a_in_data = self.a_in.recv()
+           self.u[:] += a_in_data
+           self.v[:] = self.v * \
+               ((2 ** 12 - self.dv) // 2 ** 12) + self.u + self.bias
+           s_out = self.v > self.vth
+           self.v[s_out] = 0  # Reset voltage to 0. This is Loihi-1 compatible.
+           self.s_out.send(s_out)
 
 In contrast this process model also implements the LIF process but by structurally allocating neural network resources on a virtual Loihi 1 neuro core.
 
 .. code-block:: python
 
-   from lava import magma as mg
-   from lava.magma.resources import Loihi1NeuroCore
-   from lava.proc import LIF
-   from lava.magma.ncmodel import AbstractNcProcessModel, LavaType, InPort, OutPort, Var
-
-   @mg.implements(proc=LIF)
-   @mg.requires(Loihi1NeuroCore)
-   class NcProcessModel(AbstractNcProcessModel):
+   from lava.proc.lif.process import LIF
+   from lava.magma.core.decorator import implements, requires
+   from lava.magma.core.resources import Loihi1NeuroCore
+   from lava.magma.core.model.nc.model import NcLoihiProcessModel
+   from lava.magma.core.model.nc.ports import NcInPort, NcOutPort
+   from lava.magma.core.model.nc.type import LavaNcType, NcVar
+   
+   @implements(proc=LIF) #Note that the NcLoihiProcessModel class implies the useage of the Loihi SyncProtcol
+   @requires(Loihi1NeuroCore)
+   class NcLifModel(NcLoihiProcessModel):
        # Declare port implementation
-       a_in: InPort =   LavaType(InPort, precision=16)
-       s_out: OutPort = LavaType(OutPort, precision=1)
+       a_in: InPort =   LavaNcType(NcInPort, precision=16)
+       s_out: OutPort = LavaNcType(NcOutPort, precision=1)
        # Declare variable implementation
-       u: Var =         LavaType(Var, precision=24)
-       v: Var =         LavaType(Var, precision=24)
-       b: Var =         LavaType(Var, precision=12)
-       du: Var =        LavaType(Var, precision=12)
-       dv: Var =        LavaType(Var, precision=12)
-       vth: Var =       LavaType(Var, precision=8)
+       u: NcVar =         LavaNcType(NcVar, precision=24)
+       v: NcVar =         LavaNcType(NcVar, precision=24)
+       b: NcVar =         LavaNcType(NcVar, precision=12)
+       du: NcVar =        LavaNcType(NcVar, precision=12)
+       dv: NcVar =        LavaNcType(NcVar, precision=12)
+       vth: NcVar =       LavaNcType(NcVar, precision=8)
 
        def allocate(self, net: mg.Net):
            """Allocates neural resources in 'virtual' neuro core."""
@@ -339,14 +345,14 @@ In contrast this process model also implements the LIF process but by structural
            net.connect(self.s_out, out_ax)
            # Allocate compartments
            cx_cfg = net.cx_cfg.alloc(size=1,
-                                     du=self.du,
-                                     dv=self.dv,
-                                     vth=self.vth)
+                                  du=self.du,
+                                  dv=self.dv,
+                                  vth=self.vth)
            cx = net.cx.alloc(size=num_neurons,
-                             u=self.u,
-                             v=self.v,
-                             b_mant=self.b,
-                             cfg=cx_cfg)
+                                      u=self.u,
+                                      v=self.v,
+                                 b_mant=self.b,
+                                 cfg=cx_cfg)
            cx.connect(out_ax)
            # Allocate dendritic accumulators
            da = net.da.alloc(size=num_neurons)
@@ -367,10 +373,12 @@ Documentation Overview
    :maxdepth: 2
 
    lava_architecture_overview
-   lava_api_documentation
+   getting_started_with_lava
    algorithms
    developer_guide
-   loihi_overview
+   lava_api_documentation
+
+
 
 
 
