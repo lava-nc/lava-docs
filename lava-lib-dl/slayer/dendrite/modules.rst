@@ -1,4 +1,4 @@
-dendrite
+Dendrite
 ========
 
 .. toctree::

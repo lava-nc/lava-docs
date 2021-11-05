@@ -1,5 +1,5 @@
-Lava API Documentation
-======================
+Lava
+====
 
 Lava API documentation goes here:
 

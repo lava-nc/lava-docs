@@ -1,86 +1,82 @@
-neuron package
+Neuron Modules
 ==============
 
-Submodules
-----------
+Abstract Neuron
+---------------
 
-
-slayer.neuron.base module
--------------------------
-
-.. automodule:: slayer.neuron.base
+.. automodule:: lava.lib.dl.slayer.neuron.base
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.neuron.cuba module
--------------------------
+CUrrent BAsed Leaky Integrate and Fire (CUBA) Neuron
+----------------------------------------------------
 
-.. automodule:: slayer.neuron.cuba
+.. automodule:: lava.lib.dl.slayer.neuron.cuba
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.neuron.rf module
------------------------
+Resonate and Fire (R&F) Neuron
+------------------------------
 
-.. automodule:: slayer.neuron.rf
+.. automodule:: lava.lib.dl.slayer.neuron.rf
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.neuron.rf\_iz module
----------------------------
+Resonate and Fire Izhikevich (R&F Iz) Neuron
+--------------------------------------------
 
-.. automodule:: slayer.neuron.rf_iz
+.. automodule:: lava.lib.dl.slayer.neuron.rf_iz
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.neuron.alif module
--------------------------
+Adaptive Leaky Integrate and Fire (ALIF) Neuron
+-----------------------------------------------
 
-.. automodule:: slayer.neuron.alif
+.. automodule:: lava.lib.dl.slayer.neuron.alif
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.neuron.adrf module
--------------------------
+Adaptive Resonate and Fire (Ad R&F) Neuron
+------------------------------------------
 
-.. automodule:: slayer.neuron.adrf
+.. automodule:: lava.lib.dl.slayer.neuron.adrf
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.neuron.adrf\_iz module
------------------------------
+Adaptive Resonate and Fire Izhikevich (Ad R&F Iz) Neuron
+--------------------------------------------------------
 
-.. automodule:: slayer.neuron.adrf_iz
+.. automodule:: lava.lib.dl.slayer.neuron.adrf_iz
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.neuron.sigma\_delta module
----------------------------------
+Sigma Delta Neuron (SDN)
+------------------------
 
-.. automodule:: slayer.neuron.sigma_delta
+.. automodule:: lava.lib.dl.slayer.neuron.sigma_delta
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.neuron.dropout module
-----------------------------
+Neuron Dropout
+--------------
 
-.. automodule:: slayer.neuron.dropout
+.. automodule:: lava.lib.dl.slayer.neuron.dropout
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.neuron.norm module
--------------------------
+Neuron Normalization
+--------------------
 
-.. automodule:: slayer.neuron.norm
+.. automodule:: lava.lib.dl.slayer.neuron.norm
    :members:
    :undoc-members:
    :show-inheritance:
@@ -89,7 +85,7 @@ slayer.neuron.norm module
 Module contents
 ---------------
 
-.. automodule:: neuron
+.. automodule:: lava.lib.dl.slayer.neuron
    :members:
    :undoc-members:
    :show-inheritance:

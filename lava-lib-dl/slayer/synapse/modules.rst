@@ -1,4 +1,4 @@
-synapse
+Synapse
 =======
 
 .. toctree::

@@ -1,13 +1,13 @@
-Utilities
-=========
+Bootstrap (ANN-SNN training)
+============================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   utils.filter.rst
-   utils.time.rst
-   utils.rst
+   block/modules.rst
+   ann_sampler.rst
+   routine.rst
 
 Indices and tables
 ==================

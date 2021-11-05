@@ -1,21 +1,18 @@
-axon package
-============
+Axon Module
+===========
 
-Submodules
+Axon Delay
 ----------
 
-slayer.axon.delay module
-------------------------
-
-.. automodule:: slayer.axon.delay
+.. automodule:: lava.lib.dl.slayer.axon.delay
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.axon.delta module
-------------------------
+Delta Encoder
+-------------
 
-.. automodule:: slayer.axon.delta
+.. automodule:: lava.lib.dl.slayer.axon.delta
    :members:
    :undoc-members:
    :show-inheritance:
@@ -24,7 +21,7 @@ slayer.axon.delta module
 Module contents
 ---------------
 
-.. automodule:: axon
+.. automodule:: lava.lib.dl.slayer.axon
    :members:
    :undoc-members:
    :show-inheritance:

@@ -1,4 +1,4 @@
-spike
+Spike
 =====
 
 .. toctree::

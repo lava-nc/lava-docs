@@ -1,13 +1,10 @@
-dendrite package
-================
+Dendrite Module
+===============
 
-Submodules
-----------
+Sigma Decoder
+-------------
 
-slayer.dendrite.sigma module
-----------------------------
-
-.. automodule:: slayer.dendrite.sigma
+.. automodule:: lava.lib.dl.slayer.dendrite.sigma
    :members:
    :undoc-members:
    :show-inheritance:
@@ -16,7 +13,7 @@ slayer.dendrite.sigma module
 Module contents
 ---------------
 
-.. automodule:: dendrite
+.. automodule:: lava.lib.dl.slayer.dendrite
    :members:
    :undoc-members:
    :show-inheritance:

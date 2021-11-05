@@ -1,44 +1,56 @@
-utils package
-=============
+Utility Modules
+===============
 
-Subpackages
------------
+Assistant
+---------
 
-.. toctree::
-   :maxdepth: 4
+.. automodule:: lava.lib.dl.slayer.utils.assistant
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
-   lava.lib.dl.slayer.utils.filter
-   lava.lib.dl.slayer.utils.time
+Filter
+------
 
-Submodules
-----------
+.. automodule:: lava.lib.dl.slayer.utils.filter
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
-lava.lib.dl.slayer.utils.int\_utils module
-------------------------------
+Integer Utilities
+-----------------
 
 .. automodule:: lava.lib.dl.slayer.utils.int_utils
    :members:
    :undoc-members:
    :show-inheritance:
 
-lava.lib.dl.slayer.utils.quantize module
-----------------------------
+Quantization
+------------
 
 .. automodule:: lava.lib.dl.slayer.utils.quantize
    :members:
    :undoc-members:
    :show-inheritance:
 
-lava.lib.dl.slayer.utils.stats module
--------------------------
+Learning Statistics
+-------------------
 
 .. automodule:: lava.lib.dl.slayer.utils.stats
    :members:
    :undoc-members:
    :show-inheritance:
 
-lava.lib.dl.slayer.utils.utils module
--------------------------
+Time
+----
+
+.. automodule:: lava.lib.dl.slayer.utils.time
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Utils
+-----
 
 .. automodule:: lava.lib.dl.slayer.utils.utils
    :members:
@@ -49,7 +61,7 @@ lava.lib.dl.slayer.utils.utils module
 Module contents
 ---------------
 
-.. automodule:: utils
+.. automodule:: lava.lib.dl.slayer.utils
    :members:
    :undoc-members:
    :show-inheritance:

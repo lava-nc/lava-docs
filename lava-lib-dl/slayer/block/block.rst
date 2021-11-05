@@ -1,77 +1,66 @@
-block package
-=============
+Block Module
+============
 
-Submodules
-----------
+Abstract Block
+--------------
 
-slayer.block.adrf module
-------------------------
-
-.. automodule:: slayer.block.adrf
+.. automodule:: lava.lib.dl.slayer.block.base
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.block.adrf\_iz module
-----------------------------
+CUrrent BAsed Leaky Integrate and Fire (CUBA) Block
+---------------------------------------------------
 
-.. automodule:: slayer.block.adrf_iz
+.. automodule:: lava.lib.dl.slayer.block.cuba
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.block.alif module
-------------------------
+Resonate and Fire (R&F) Block
+-----------------------------
 
-.. automodule:: slayer.block.alif
+.. automodule:: lava.lib.dl.slayer.block.rf
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.block.base module
-------------------------
+Resonate and Fire Izhikevich (R&F Iz) Block
+-------------------------------------------
 
-.. automodule:: slayer.block.base
+.. automodule:: lava.lib.dl.slayer.block.rf_iz
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.block.cuba module
-------------------------
+Adaptive Leaky Integrate and Fire (ALIF) Block
+----------------------------------------------
 
-.. automodule:: slayer.block.cuba
+.. automodule:: lava.lib.dl.slayer.block.alif
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.block.lmu module
+Adaptive Resonate and Fire (Ad R&F) Block
+-----------------------------------------
+
+.. automodule:: lava.lib.dl.slayer.block.adrf
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Adaptive Resonate and Fire Izhikevich (Ad R&F Iz) Block
+-------------------------------------------------------
+
+.. automodule:: lava.lib.dl.slayer.block.adrf_iz
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Sigma Delta Block (SDN)
 -----------------------
 
-.. automodule:: slayer.block.lmu
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-slayer.block.rf module
-----------------------
-
-.. automodule:: slayer.block.rf
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-slayer.block.rf\_iz module
---------------------------
-
-.. automodule:: slayer.block.rf_iz
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-slayer.block.sigma\_delta module
---------------------------------
-
-.. automodule:: slayer.block.sigma_delta
+.. automodule:: lava.lib.dl.slayer.block.sigma_delta
    :members:
    :undoc-members:
    :show-inheritance:
@@ -80,7 +69,7 @@ slayer.block.sigma\_delta module
 Module contents
 ---------------
 
-.. automodule:: block
+.. automodule:: lava.lib.dl.slayer.block
    :members:
    :undoc-members:
    :show-inheritance:

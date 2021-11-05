@@ -1,4 +1,4 @@
-axon
+Axon
 ====
 
 .. toctree::

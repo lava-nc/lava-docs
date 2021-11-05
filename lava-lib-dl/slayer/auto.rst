@@ -1,5 +1,5 @@
 Auto
 ====
 
-.. automodule:: slayer.auto
+.. automodule:: lava.lib.dl.slayer.auto
    :members:

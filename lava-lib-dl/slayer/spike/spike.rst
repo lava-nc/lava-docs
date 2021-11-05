@@ -1,21 +1,18 @@
-spike package
-=============
+Spike Module
+============
 
-Submodules
-----------
+Spike
+-----
 
-slayer.spike.complex module
----------------------------
-
-.. automodule:: slayer.spike.complex
+.. automodule:: lava.lib.dl.slayer.spike.spike
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.spike.spike module
--------------------------
+Complex Spike (Phase Threshold)
+-------------------------------
 
-.. automodule:: slayer.spike.spike
+.. automodule:: lava.lib.dl.slayer.spike.complex
    :members:
    :undoc-members:
    :show-inheritance:
@@ -24,7 +21,7 @@ slayer.spike.spike module
 Module contents
 ---------------
 
-.. automodule:: spike
+.. automodule:: lava.lib.dl.slayer.spike
    :members:
    :undoc-members:
    :show-inheritance:

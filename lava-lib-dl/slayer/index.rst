@@ -1,16 +1,10 @@
-Lava-dl SLAYER
-==============
+SLAYER
+======
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   loss.rst
-   classifier.rst
-   io.rst
-   utils/index.rst
-
-..
    neuron/modules.rst
    synapse/modules.rst
    spike/modules.rst
@@ -20,6 +14,7 @@ Lava-dl SLAYER
    loss.rst
    classifier.rst
    io.rst
+   auto.rst
    utils/modules.rst
 
 Indices and tables

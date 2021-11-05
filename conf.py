@@ -1,7 +1,8 @@
 import os
 import sys
 import sphinx_rtd_theme
-sys.path.insert(0, os.path.abspath("../lava/lava"))
+# sys.path.insert(0, os.path.abspath("../lava"))
+sys.path.insert(0, os.path.abspath("../lava-dist-bug/lava/src/python/"))
 sys.path.insert(0, os.path.abspath("../lava-dl"))
 sys.path.insert(0, os.path.abspath("../lava-dnf"))
 sys.path.insert(0, os.path.abspath("../lava-optimization"))

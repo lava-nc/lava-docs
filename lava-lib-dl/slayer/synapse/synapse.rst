@@ -1,21 +1,18 @@
-synapse package
-===============
+Synapse Module
+==============
 
-Submodules
-----------
+Real Synapse
+------------
 
-slayer.synapse.complex module
------------------------------
-
-.. automodule:: slayer.synapse.complex
+.. automodule:: lava.lib.dl.slayer.synapse.layer
    :members:
    :undoc-members:
    :show-inheritance:
 
-slayer.synapse.layer module
----------------------------
+Complex Module
+--------------
 
-.. automodule:: slayer.synapse.layer
+.. automodule:: lava.lib.dl.slayer.synapse.complex
    :members:
    :undoc-members:
    :show-inheritance:
@@ -24,7 +21,7 @@ slayer.synapse.layer module
 Module contents
 ---------------
 
-.. automodule:: synapse
+.. automodule:: lava.lib.dl.slayer.synapse
    :members:
    :undoc-members:
    :show-inheritance:
