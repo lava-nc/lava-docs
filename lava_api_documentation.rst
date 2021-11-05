@@ -3,4 +3,11 @@ Lava API Documentation
 
  .. note::
     API documentation will arrive shortly. In the mean time, please review docstrings in code.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   lava/index.rst
+   lava-lib-dl/index.rst
  

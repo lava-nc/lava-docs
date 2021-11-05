@@ -9,3 +9,9 @@ pip install -r requirements.txt
 ```bash
 pyb sphinx_generate_documentation
 ```
+
+# Make Docs
+They will be in `_build/html`
+```bash
+make html
+```
