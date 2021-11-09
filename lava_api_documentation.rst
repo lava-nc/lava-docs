@@ -8,6 +8,6 @@ Lava API Documentation
    :maxdepth: 4
    :caption: Contents:
 
-   lava/index.rst
+   lava/modules.rst
    lava-lib-dl/index.rst
  
