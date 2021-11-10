@@ -18,7 +18,7 @@ trained SNNs.
 Lava-DL provides an improved version of
 `SLAYER <https://github.com/bamsumit/slayerPytorch>`__ for direct
 training of deep event based networks and a new ANN-SNN accelerated
-training approach called `Bootstrap:TODO <link_here>`__ to mitigate high latency issue of conventional ANN-SNN methods for training Deep
+training approach called `Bootstrap <lava-lib-dl/bootstrap/bootstrap.html>`__ to mitigate high latency issue of conventional ANN-SNN methods for training Deep
 Event-Based Networks.
 
 The lava-dl training libraries are independent of the core lava library since Lava Processes cannot be trained directly at this point. Instead, lava-dl is first used to train the model which can then be converted to a network of Lava processes using the netx library using platform independent hdf5 network description.
@@ -60,14 +60,14 @@ Getting Started
 
 **End to end tutorials**
 
-* `Oxford spike train regression <dummy_link>`__ TODO: UPDATE LINK 
-* `MNIST digit classification <dummy_link>`__ TODO: UPDATE LINK 
-* `NMNIST digit classification <dummy_link>`__ TODO: UPDATE LINK 
-* `PilotNet steering angle prediction <dummy_link>`__ TODO: UPDATE LINK
+* `Oxford spike train regression <lava-lib-dl/slayer/notebooks/oxford/train.html>`__
+* `MNIST digit classification <lava-lib-dl/bootstrap/notebooks/mnist/train.html>`__ 
+* `NMNIST digit classification <lava-lib-dl/slayer/notebooks/nmnist/train.html>`__ 
+* `PilotNet steering angle prediction <lava-lib-dl/slayer/notebooks/pilotnet/train.html>`__
 
 **Deep dive tutorials**
 
-* `Dynamics and Neurons <dummy_link>`__ TODO: UPDATE LINK
+* `Dynamics and Neurons <lava-lib-dl/slayer/notebooks/neuron_dynamics/dynamics.html>`__
 
 ``lava.lib.dl.slayer``
 ----------------------

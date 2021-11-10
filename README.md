@@ -5,7 +5,7 @@ Documentation source for Lava https://github.com/lava-nc/
 ```bash
 pip install -r requirements.txt
 ```
-# Generate documentation
+# Test Doc Build
 ```bash
 pyb sphinx_generate_documentation
 ```
