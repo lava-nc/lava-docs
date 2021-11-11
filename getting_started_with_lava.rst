@@ -11,7 +11,7 @@ Application examples:
 
 These are standalone tutorials that can be followed in any order.
 
-* `MNIST digit classification: <https://github.com/lava-nc/lava/blob/main/lava/tutorials/end_to_end/tutorial01_mnist_digit_classification.ipynb>`_ The classical '*Hello World!*' example illustrating how to build a simple feed-forward image classifier using leaky-integrate-and-fire neurons.
+* `MNIST digit classification: <lava/notebooks/end_to_end/tutorial01_mnist_digit_classification.html>`_ The classical '*Hello World!*' example illustrating how to build a simple feed-forward image classifier using leaky-integrate-and-fire neurons.
 
 **Coming soon:**
 

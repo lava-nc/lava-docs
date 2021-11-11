@@ -30,3 +30,5 @@ def set_properties(project):
     project.build_depends_on("sphinx")
     project.plugin_depends_on("sphinx_rtd_theme")
     project.plugin_depends_on("sphinx_tabs")
+
+    project.plugin_depends_on("nbsphinx")
