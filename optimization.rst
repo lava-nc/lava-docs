@@ -45,3 +45,12 @@ Example
    solution, t_sol = solver.solve(timeout=5000, backend='Loihi2', profile=True)
    print(solver.time_to_solution)
    print(solver.energy_to_solution)
+
+API Documentation
+-----------------
+
+Lava Optimization Documentation
+======================
+
+ .. note::
+    The documentation will arrive shortly. In the mean time, please review docstrings in code. 
