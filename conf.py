@@ -1,6 +1,6 @@
-import os
-import sys
-import sphinx_rtd_theme
+# import os
+# import sys
+# import sphinx_rtd_theme
 
 project = "Lava"
 copyright = "2021, Intel Corporation"

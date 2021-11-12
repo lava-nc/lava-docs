@@ -11,6 +11,7 @@ summary = "A Software Framework for Neuromorphic Computing"
 url = "https://lava-nc.org"
 license = "BSD-3-Clause"
 
+
 @init
 def set_properties(project):
     project.set_property("dir_source_main_python", "../lava")

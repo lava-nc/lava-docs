@@ -65,6 +65,7 @@ def create_nb_rst(folder_path, rst_name, header, ignore=[]):
             continue
         rst_text += f'    {nb_name}{os.linesep}'
 
+    print('Creating ' + folder_path + '/' + rst_name)
     with open(folder_path + '/' + rst_name, 'wt') as f:
         f.write(rst_text)
 
@@ -92,7 +93,7 @@ if __name__ == '__main__':
                 src_path = src_path[0]
                 print(f'copying from {src_path} to {dst_path}')
                 copy_tree(src_path, dst_path)
-                create_nb_rst(src_path, tutorial+'.rst', header, ignore)
+                create_nb_rst(dst_path, tutorial+'.rst', header, ignore)
             else:
                 if len(src_path) == 0:
                     print(f'search path: {module_path}tutorials/**/{tutorial}')
