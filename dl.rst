@@ -4,7 +4,7 @@ Deep Learning
 Introduction
 ------------
 
-Lava-DL (``lava-dl``) is a library of deep learning tools within Lava that
+Lava-DL (``lava-dl``) is a library of deep learning tools within Lava that 
 support offline training, online training and inference methods for
 various Deep Event-Based Networks.
 

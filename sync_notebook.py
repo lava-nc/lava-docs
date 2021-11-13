@@ -94,6 +94,7 @@ def create_nb_rst(folder_path, rst_name, header, ignore=[]):
             continue
         rst_text += f'    {nb_name}{os.linesep}'
 
+
     print('Creating ' + folder_path + '/' + rst_name)
     with open(folder_path + '/' + rst_name, 'wt') as f:
         f.write(rst_text)
