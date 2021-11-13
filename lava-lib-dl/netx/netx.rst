@@ -1,7 +1,7 @@
-Lava-dl-netx
+Lava-DL NetX
 ============
 
-``lava.lib.dl.netx`` automates deep learning network model exchange
+Lava-DL NetX library ``lava.lib.dl.netx`` automates deep learning network model exchange
 to/from LAVA from/to other frameworks. At the moment, we support a
 simple platform independent hdf5 network description protocol. In
 furture we will extend network exchange support to other neural network

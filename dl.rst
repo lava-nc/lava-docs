@@ -1,7 +1,10 @@
-Lava DL
-=======
+Deep Learning
+=============
 
-``lava-dl`` is a library of deep learning tools within Lava that
+Introduction
+------------
+
+Lava-DL (``lava-dl``) is a library of deep learning tools within Lava that 
 support offline training, online training and inference methods for
 various Deep Event-Based Networks.
 
@@ -69,10 +72,10 @@ Getting Started
 
 * `Dynamics and Neurons <lava-lib-dl/slayer/notebooks/neuron_dynamics/dynamics.html>`__
 
-``lava.lib.dl.slayer``
-----------------------
+SLAYER 2.0
+----------
 
-``lava.lib.dl.slayer`` is an enhanced version of
+SLAYER 2.0 (`lava.lib.dl.slayer`) is an enhanced version of
 `SLAYER <https://github.com/bamsumit/slayerPytorch>`__. Most noteworthy
 enhancements are: support for *recurrent network structures*, a wider
 variety of *neuron models* and *synaptic connections* (a complete list
@@ -81,7 +84,7 @@ of features is
 This version of SLAYER is built on top of the
 `PyTorch <https://pytorch.org/>`__ deep learning framework, similar to
 its predecessor. For smooth integration with Lava,
-``lava.lib.dl.slayer`` supports exporting trained models using the
+`lava.lib.dl.slayer` supports exporting trained models using the
 platform independent **hdf5 network exchange** format.
 
 In future versions, SLAYER will get completely integrated into Lava to
@@ -151,15 +154,15 @@ Example Code
 
    net.export_hdf5('network.net')
 
-``lava.lib.dl.bootstrap``
--------------------------
+Bootstrap
+---------
 
 In general ANN-SNN conversion methods for rate based SNN result in high latency of the network during inference. This is because the rate interpretation of a spiking neuron using ReLU acitvation unit breaks down for short inference times. As a result, the network requires many time steps per sample to achieve adequate inference results.
 
-``lava.lib.dl.bootstrap`` enables rapid training of rate based SNNs by translating them to an equivalent dynamic ANN representation which leads to SNN performance close to the equivalent ANN and low latency inference. More details `here <lava-lib-dl/bootstrap/bootstrap.html>`__. It also supports *hybrid training*
+Bootstrap (`lava.lib.dl.bootstrap`) enables rapid training of rate based SNNs by translating them to an equivalent dynamic ANN representation which leads to SNN performance close to the equivalent ANN and low latency inference. More details `here <lava-lib-dl/bootstrap/bootstrap.html>`__. It also supports *hybrid training*
 a mixed ANN-SNN network to minimize the ANN to SNN performance gap. This method is independent of the SNN model being used.
 
-It has similar API as ``lava.lib.dl.slayer`` and supports exporting
+It has similar API as `lava.lib.dl.slayer` and supports exporting
 trained models using the platform independent **hdf5 network exchange**
 format.
 
@@ -231,10 +234,10 @@ Example Code
 
    net.export_hdf5('network.net')
 
-``lava.lib.dl.netx`` 
---------------------
+Network Exchange (NetX) Library 
+-------------------------------
 
-For inference using Lava, ``lava.lib.dl.netx`` provides an
+For inference using Lava, Network Exchange Library (`lava.lib.dl.netx`) provides an
 automated API for loading SLAYER-trained models as Lava Processes, which
 can be directly run on a desired backend. ``lava.lib.dl.netx`` imports
 models saved via SLAYER using the hdf5 network exchange format. The
@@ -285,6 +288,9 @@ Example Code
    from lava.magma import run_conditions as rcnd
 
    net.run(condition=rcnd.RunSteps(total_run_time), run_cfg=rcfg.Loihi1SimCfg())
+
+Detailed Description
+--------------------
 
 .. toctree::
    :maxdepth: 1

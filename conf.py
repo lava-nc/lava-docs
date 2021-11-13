@@ -1,7 +1,3 @@
-import os
-import sys
-import sphinx_rtd_theme
-
 project = "Lava"
 copyright = "2021, Intel Corporation"
 author = "Intel Corporation"
@@ -17,7 +13,6 @@ extensions = [
     "nbsphinx",
 ]
 
-# napoleon_google_docstring = True
 napoleon_numpy_docstring = True
 napoleon_include_init_with_doc = False
 napoleon_include_private_with_doc = False

@@ -1,5 +1,5 @@
-Network Exchange (Netx)
-=======================
+Lava-DL NetX
+============
 
 .. Note::
    Coming soon.
