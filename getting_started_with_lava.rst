@@ -25,22 +25,22 @@ Fundamental concepts:
 
 These tutorials walk step-by-step through the fundamental concepts of Lava introduced in `Lava Architecture <https://lava-nc.org/lava_architecture_overview.html>`_. These tutorials tend to build on each other, therefore it's best to consume them in order.
 
-1. `Installing Lava <https://github.com/lava-nc/lava/blob/main/lava/tutorials/in_depth/tutorial01_installing_lava.ipynb>`_:
+1. `Installing Lava <https://github.com/lava-nc/lava/blob/main/src/lava/tutorials/in_depth/tutorial01_installing_lava.ipynb>`_:
 Quickly get Lava installed, tested and ready to develop on your system.
   
-2. `Processes <https://github.com/lava-nc/lava/blob/main/lava/tutorials/in_depth/tutorial02_processes.ipynb>`_:
+2. `Processes <https://github.com/lava-nc/lava/blob/main/src/lava/tutorials/in_depth/tutorial02_processes.ipynb>`_:
 Learn how to create *Processes* which are Lava's fundamental computational building blocks.
   
-3. `Process models <https://github.com/lava-nc/lava/blob/main/lava/tutorials/in_depth/tutorial03_process_models.ipynb>`_:
+3. `Process models <https://github.com/lava-nc/lava/blob/main/src/lava/tutorials/in_depth/tutorial03_process_models.ipynb>`_:
 Learn to implement *Process* behavior with the ability to run on diverse backends via Lava *ProcessModels*.
 
-4. `Execution <https://github.com/lava-nc/lava/blob/main/lava/tutorials/in_depth/tutorial04_execution.ipynb>`_:
+4. `Execution <https://github.com/lava-nc/lava/blob/main/src/lava/tutorials/in_depth/tutorial04_execution.ipynb>`_:
 This notebook demonstrates how to configure, start, and stop the execution of a network of *Processes*.
 
-.. 5. `Connecting processes <https://github.com/lava-nc/lava/blob/main/lava/tutorials/in_depth/tutorial05_connect_processes.ipynb>`_:
+.. 5. `Connecting processes <https://github.com/lava-nc/lava/blob/main/src/lava/tutorials/in_depth/tutorial05_connect_processes.ipynb>`_:
 .. How to connect *Processes* for message-based communication via channels and to build a network of asynchronously operating and interacting *Processes*.
 
-.. 6. `Hierarchical processes <https://github.com/lava-nc/lava/blob/main/lava/tutorials/in_depth/tutorial06_hierarchical_processes.ipynb>`_:
+.. 6. `Hierarchical processes <https://github.com/lava-nc/lava/blob/main/src/lava/tutorials/in_depth/tutorial06_hierarchical_processes.ipynb>`_:
 .. Processes can be composed into hierarchical processes. Learn how to implement *SubProcessModels* to build modular *Processes* of *Processes*.
 
 **Coming shortly:**
