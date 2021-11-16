@@ -1,4 +1,4 @@
-lava package
+Lava Package
 ============
 
 Subpackages
