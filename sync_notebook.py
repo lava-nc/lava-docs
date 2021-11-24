@@ -6,7 +6,8 @@ module_dict = {}
 
 try:
     import lava
-    module_dict.update({'lava': lava})
+    import lava.proc
+    module_dict.update({'lava': lava.proc})  # this must be unique path
 except ModuleNotFoundError:
     print(f"Failed importing {lava}. It's dependencies will be excluded.")
 
@@ -58,7 +59,7 @@ tutorial_list = [  # list of all notebooks to sync
         'module': 'optim',
         'dst': 'lava/notebooks/',
         'tutorials': {
-            'end_to_end': 'End to end tutorials',
+            'qp': 'QP solver tutorials',
         },
     },
 ]
@@ -107,9 +108,9 @@ if __name__ == '__main__':
             module = module_dict[key]
             module_path = module.__path__[0]
             module_path = module_path.split('src/lava')[0]
-            if module_path[-1] != '/': 
-                # this is temp before lava dir restructure
-                module_path += '/'
+            # if module_path[-1] != '/': 
+            #     # this is temp before lava dir restructure
+            #     module_path += '/'
             dst = tutorials['dst']
             if 'ignore' in tutorials.keys():
                 ignore = tutorials['ignore']
