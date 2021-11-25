@@ -108,9 +108,6 @@ if __name__ == '__main__':
             module = module_dict[key]
             module_path = module.__path__[0]
             module_path = module_path.split('src/lava')[0]
-            # if module_path[-1] != '/': 
-            #     # this is temp before lava dir restructure
-            #     module_path += '/'
             dst = tutorials['dst']
             if 'ignore' in tutorials.keys():
                 ignore = tutorials['ignore']
