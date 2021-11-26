@@ -43,7 +43,7 @@ How to connect *Processes* for message-based communication via channels and to b
 6. `Hierarchical processes <https://github.com/lava-nc/lava/blob/main/tutorials/in_depth/tutorial06_hierarchical_processes.ipynb>`_:
 Processes can be composed into hierarchical processes. Learn how to implement *SubProcessModels* to build modular *Processes* of *Processes*.
 
-7. `Direct memory access<https://github.com/lava-nc/lava/blob/main/tutorials/in_depth/tutorial07_remote_memory_access.ipynb>`_:
+7. `Direct memory access <https://github.com/lava-nc/lava/blob/main/tutorials/in_depth/tutorial07_remote_memory_access.ipynb>`_:
 Explains how to realize remote memory access between *Processes* and what to be cautious about.
 
 **Coming shortly:**
