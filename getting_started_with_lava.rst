@@ -37,22 +37,16 @@ Learn to implement *Process* behavior with the ability to run on diverse backend
 4. `Execution <https://github.com/lava-nc/lava/blob/main/tutorials/in_depth/tutorial04_execution.ipynb>`_:
 This notebook demonstrates how to configure, start, and stop the execution of a network of *Processes*.
 
-.. 5. `Connecting processes <https://github.com/lava-nc/lava/blob/main/tutorials/in_depth/tutorial05_connect_processes.ipynb>`_:
-.. How to connect *Processes* for message-based communication via channels and to build a network of asynchronously operating and interacting *Processes*.
-
-.. 6. `Hierarchical processes <https://github.com/lava-nc/lava/blob/main/tutorials/in_depth/tutorial06_hierarchical_processes.ipynb>`_:
-.. Processes can be composed into hierarchical processes. Learn how to implement *SubProcessModels* to build modular *Processes* of *Processes*.
-
-**Coming shortly:**
-
-5. Connecting processes:
+5. `Connecting processes <https://github.com/lava-nc/lava/blob/main/tutorials/in_depth/tutorial05_connect_processes.ipynb>`_:
 How to connect *Processes* for message-based communication via channels and to build a network of asynchronously operating and interacting *Processes*.
 
-6. Hierarchical processes:
-*Processes* can be composed into hierarchical processes. Learn how to implement *SubProcessModels* to build modular *Processes* of *Processes*.
+6. `Hierarchical processes <https://github.com/lava-nc/lava/blob/main/tutorials/in_depth/tutorial06_hierarchical_processes.ipynb>`_:
+Processes can be composed into hierarchical processes. Learn how to implement *SubProcessModels* to build modular *Processes* of *Processes*.
 
-7. Direct memory access:
-Explains how to realize direct memory access between *Processes* and what to be cautious about.
+7. `Remote memory access <https://github.com/lava-nc/lava/blob/main/tutorials/in_depth/tutorial07_remote_memory_access.ipynb>`_:
+Explains how to realize remote memory access between *Processes* and what to be cautious about.
+
+**Coming shortly:**
 
 8. State monitoring:
 Lava offers probes to monitor the evolution of temporal state during execution. Learn how to create probes, retrieve timeseries and how to create custom visualization of network dynamics.
