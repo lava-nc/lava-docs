@@ -59,7 +59,7 @@ tutorial_list = [  # list of all notebooks to sync
         'module': 'optim',
         'dst': 'lava/notebooks/',
         'tutorials': {
-            'qp': 'QP solver tutorials',
+            '': 'QP solver tutorials',
         },
     },
 ]
