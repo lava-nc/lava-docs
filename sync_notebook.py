@@ -25,6 +25,12 @@ except ModuleNotFoundError:
     print(f"Failed importing bootstrap. It's dependencies will be excluded.")
 
 try:
+    import lava.lib.dl.netx as netx
+    module_dict.update({'netx': netx})
+except ModuleNotFoundError:
+    print(f"Failed importing netx. It's dependencies will be excluded.")
+
+try:
     import lava.lib.optimization as optim
     module_dict.update({'optim': optim})
 except ModuleNotFoundError:
@@ -61,8 +67,8 @@ tutorial_list = [  # list of all notebooks to sync
         'dst': 'lava-lib-dl/netx/notebooks/',
         'tutorials': {
             'oxford': 'Oxford Inference',
-            'pn_snn': 'PilotNet SNN Inference',
-            'pn_sdnn': 'PilotNet SDNN Inference',
+            'pilotnet_snn': 'PilotNet SNN Inference',
+            'pilotnet_sdnn': 'PilotNet SDNN Inference',
         },
     },
     {
