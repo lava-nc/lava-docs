@@ -1,6 +1,7 @@
 import os
 import glob
-from distutils.dir_util import copy_tree
+from shutil import copytree as copy_tree
+from shutil import ignore_patterns
 
 module_dict = {}
 
@@ -22,6 +23,12 @@ try:
     module_dict.update({'bootstrap': bootstrap})
 except ModuleNotFoundError:
     print(f"Failed importing bootstrap. It's dependencies will be excluded.")
+
+try:
+    import lava.lib.dl.netx as netx
+    module_dict.update({'netx': netx})
+except ModuleNotFoundError:
+    print(f"Failed importing netx. It's dependencies will be excluded.")
 
 try:
     import lava.lib.optimization as optim
@@ -56,10 +63,19 @@ tutorial_list = [  # list of all notebooks to sync
         },
     },
     {
+        'module': 'netx',
+        'dst': 'lava-lib-dl/netx/notebooks/',
+        'tutorials': {
+            'oxford': 'Oxford Inference',
+            'pilotnet_snn': 'PilotNet SNN Inference',
+            'pilotnet_sdnn': 'PilotNet SDNN Inference',
+        },
+    },
+    {
         'module': 'optim',
         'dst': 'lava/notebooks/',
         'tutorials': {
-            'qp': 'QP solver tutorials',
+            '': 'QP solver tutorials',
         },
     },
 ]
@@ -120,10 +136,17 @@ if __name__ == '__main__':
                     recursive=True,
                 )
                 dst_path = dst + tutorial
+
+                # filter src path in key
+                filter_path = []
+                for p in src_path:
+                    if key in p:
+                        filter_path.append(p)
+                src_path = filter_path
                 if len(src_path) == 1:
                     src_path = src_path[0]
                     print(f'copying from {src_path} to {dst_path}')
-                    copy_tree(src_path, dst_path)
+                    copy_tree(src_path, dst_path, ignore=ignore_patterns('data', 'Logs'), dirs_exist_ok=True)
                     create_nb_rst(dst_path, tutorial+'.rst', header, ignore)
                 else:
                     if len(src_path) == 0:
@@ -133,6 +156,8 @@ if __name__ == '__main__':
                         )
                         raise Exception('Module not found! Check your config')
                     else:
+                        print(f'{key=}')
+                        print(f'{filter_path=}')
                         raise Exception(
                             f'Multiple Moudles found: '
                             f'{src_path}'
