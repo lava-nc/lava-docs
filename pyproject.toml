@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "lava-docs"
+version = "0.3.0"
+description = "A Software Framework for Neuromorphic Computing"
+authors = [
+    "Intel's Neuromorphic Computing Lab and the open source community <lava@intel.com>"
+]
+license = "Lava uses multiple licenses and is licensed under BSD-3-Clause or LGPL-2.1-or-later"
+
+[tool.poetry.dependencies]
+python = ">=3.8, <3.11"
+
+Sphinx = "^4.4.0"
+sphinx-rtd-theme = "1.0.0"
+sphinx-tabs = "^3.2.0"
+nbsphinx = "^0.8.8"
+jupyterlab = "^3.3.0"
+lava-nc = { git = "https://github.com/lava-nc/lava.git", branch = "main" }
+#, tag = "v0.2.0" 
+lava-dl = { git = "https://github.com/lava-nc/lava-dl.git", branch = "main" }
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
