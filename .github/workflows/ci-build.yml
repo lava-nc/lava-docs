@@ -1,23 +1,23 @@
-name: Run CI
-on: [push, pull_request]
+# name: Run CI
+# on: [push, pull_request]
 
-jobs:
-  build-docs:
-    name: Build sphinx docs
-    runs-on: ubuntu-latest
+# jobs:
+#   build-docs:
+#     name: Build sphinx docs
+#     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
+#     steps:
+#     - uses: actions/checkout@v2
 
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
+#     - name: Set up Python 3.9
+#       uses: actions/setup-python@v2
+#       with:
+#         python-version: 3.9
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pybuilder
-    - name: Run pybuilder to build docs
-      run: |
-        pyb sphinx_generate_documentation
+#     - name: Install dependencies
+#       run: |
+#         python -m pip install --upgrade pip
+#         pip install "poetry>=1.1.13"
+#     - name: Build docs
+#       run: |
+        
