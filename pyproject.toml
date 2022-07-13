@@ -13,11 +13,11 @@ python = ">=3.8, <3.11"
 Sphinx = "^4.4.0"
 sphinx-rtd-theme = "1.0.0"
 sphinx-tabs = "^3.2.0"
+numpydoc = "^1.2"
 nbsphinx = "^0.8.8"
 jupyterlab = "^3.3.0"
-lava-nc = { git = "https://github.com/lava-nc/lava.git", branch = "main" }
-#, tag = "v0.2.0" 
-lava-dl = { git = "https://github.com/lava-nc/lava-dl.git", branch = "main" }
+lava-nc = { git = "https://github.com/lava-nc/lava.git", branch = "main", tag = "v0.3.0" }
+lava-dl = { git = "https://github.com/lava-nc/lava-dl.git", branch = "main", tag = "v0.2.0" }
 
 [tool.poetry.dev-dependencies]
 
