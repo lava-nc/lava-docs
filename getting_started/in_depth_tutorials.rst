@@ -1,3 +1,4 @@
+.. _fundamental concepts:
 
 Fundamental concepts
 --------------------

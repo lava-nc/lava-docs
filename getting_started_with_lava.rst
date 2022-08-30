@@ -1,3 +1,5 @@
+.. _getting started with lava:
+
 Getting Started With Lava
 =========================
 

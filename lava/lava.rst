@@ -17,7 +17,7 @@ Lava is divided into the sub-packages:
 
 A fundamental description about Lava and its key componentes can be found in :ref:`Lava Architecture <lava architecture>`.
 
-Explanatory tutorials and example code can be found in the :ref:`in-depth tutorials <lava/notebooks/in_depth/in_depth:In-depth tutorials>` and in the :ref:`End-to-end Tutorial notebooks <lava/notebooks/end_to_end/end_to_end:End to end tutorials>`. 
+Explanatory tutorials and example code can be found in the :ref:`in-depth tutorials <getting_started/in_depth_tutorials:fundamental concepts>` and in the :ref:`End-to-end Tutorial notebooks <getting_started/end_to_end_tutorials:application examples>`. 
 
 
 .. toctree::

@@ -1,3 +1,4 @@
+.. _application examples:
 
 Application examples
 --------------------
