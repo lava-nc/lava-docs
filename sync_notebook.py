@@ -43,6 +43,7 @@ tutorial_list = [  # list of all notebooks to sync
         'dst': 'lava/notebooks/',
         'tutorials': {
             'end_to_end': 'End to end tutorials',
+            'in_depth': 'In-depth tutorials',
         },
     },
     {
@@ -94,6 +95,7 @@ def create_nb_rst(folder_path, rst_name, header, ignore=[]):
         header of the rST file entry
     """
     rst_text = f'''
+    .. _{header}:
     {header}
     {"="*len(header)}
 

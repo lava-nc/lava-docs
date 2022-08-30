@@ -11,7 +11,12 @@ extensions = [
     'sphinx.ext.imgmath',
     "sphinx.ext.mathjax",
     "nbsphinx",
+    "sphinx.ext.graphviz",
+    "sphinx.ext.inheritance_diagram"
 ]
+
+inheritance_graph_attrs = dict(rankdir="TB", size='""')
+autosectionlabel_prefix_document = True
 
 napoleon_numpy_docstring = True
 napoleon_include_init_with_doc = False
@@ -24,9 +29,7 @@ napoleon_use_ivar = False
 napoleon_use_param = True
 napoleon_use_rtype = True
 
-templates_path = ["_templates"]
-
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "_templates"]
 
 html_theme = "sphinx_rtd_theme"
 

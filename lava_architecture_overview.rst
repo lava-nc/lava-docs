@@ -1,4 +1,4 @@
-.. https://bashtage.github.io/sphinx-material/rst-cheatsheet/rst-cheatsheet.html
+.. _lava architecture:
 
 Lava Architecture
 =================

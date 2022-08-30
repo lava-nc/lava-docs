@@ -1,35 +1,40 @@
-lava.magma.core.sync package
-============================
+lava.magma.core.sync
+====================
 
-Subpackages
------------
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 10
 
    lava.magma.core.sync.protocols
 
-Submodules
-----------
 
-lava.magma.core.sync.domain module
-----------------------------------
+
+lava.magma.core.sync.domain
+---------------------------
+
+.. inheritance-diagram:: lava.magma.core.sync.domain
+   :parts: 1
+
+
 
 .. automodule:: lava.magma.core.sync.domain
    :members:
    :undoc-members:
    :show-inheritance:
 
-lava.magma.core.sync.protocol module
-------------------------------------
+lava.magma.core.sync.protocol
+-----------------------------
+
+.. inheritance-diagram:: lava.magma.core.sync.protocol
+   :parts: 1
+
+
 
 .. automodule:: lava.magma.core.sync.protocol
    :members:
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
 
 .. automodule:: lava.magma.core.sync
    :members:
