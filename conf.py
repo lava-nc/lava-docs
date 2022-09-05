@@ -15,6 +15,8 @@ extensions = [
     "sphinx.ext.inheritance_diagram"
 ]
 
+mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+
 inheritance_graph_attrs = dict(rankdir="TB", size='""')
 autosectionlabel_prefix_document = True
 

@@ -10,5 +10,5 @@ Welcome to Lava API documentation.
    lava/lava.rst
    lava-lib-dl/index.rst
    lava-lib-dnf/index.rst
-   lava-lib-optimization/index.rst
+   lava-lib-optimization/lava.lib.optimization.rst
  
