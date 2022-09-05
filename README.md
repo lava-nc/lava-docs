@@ -13,7 +13,7 @@ If new files have been created in the source code repositories (such as lava, la
 
 
 ```bash
-sphinx-apidoc -o <output_path? <path-to-src-repo>/src/lava -t _templates -H -d 10 --implicit-namespace
+sphinx-apidoc -o <output_path> <path-to-src-repo>/src/lava -t _templates -H -d 10 --implicit-namespace
 ```
 
 Afterwards, the html files must be built:
