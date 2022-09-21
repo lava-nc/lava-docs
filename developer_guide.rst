@@ -42,16 +42,6 @@ To receive regular updates on the latest developments and releases of the Lava S
 
 Email the Intel Lava Team at: lava@intel.com
 
-Table of Contents
-*****************
-
-- :ref:`Development Roadmap`
-- :ref:`How to contribute to Lava`
-- :ref:`Coding Conventions`
-- :ref:`Contributors`
-- :ref:`Repository Structure`
-- :ref:`Code of Conduct`
-
 Development Roadmap
 *******************
 Our development roadmap will be published soon.
