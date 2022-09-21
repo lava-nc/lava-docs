@@ -364,7 +364,6 @@ List of lava-nc/lava Project Committers
 - `awintel <https://github.com/awintel>`_
 - `joyeshmishra <https://github.com/joyeshmishra>`_
 - `ysingh7 <https://github.com/ysingh7>`_
-- `jlakness-intel <https://github.com/jlakness-intel>`_
 - `mgkwill <https://github.com/mgkwill>`_
 
 List of lava-nc/lava-dnf Project Committers
@@ -373,7 +372,6 @@ List of lava-nc/lava-dnf Project Committers
 - `awintel <https://github.com/awintel>`_
 - `joyeshmishra <https://github.com/joyeshmishra>`_
 - `ysingh7 <https://github.com/ysingh7>`_
-- `jlakness-intel <https://github.com/jlakness-intel>`_
 - `mgkwill <https://github.com/mgkwill>`_
 
 List of lava-nc/lava-optimization Project Committers
@@ -382,7 +380,6 @@ List of lava-nc/lava-optimization Project Committers
 - `awintel <https://github.com/awintel>`_
 - `joyeshmishra <https://github.com/joyeshmishra>`_
 - `ysingh7 <https://github.com/ysingh7>`_
-- `jlakness-intel <https://github.com/jlakness-intel>`_
 - `mgkwill <https://github.com/mgkwill>`_
 
 List of lava-nc/lava-dl Project Committers
@@ -392,7 +389,6 @@ List of lava-nc/lava-dl Project Committers
 - `awintel <https://github.com/awintel>`_
 - `joyeshmishra <https://github.com/joyeshmishra>`_
 - `ysingh7 <https://github.com/ysingh7>`_
-- `jlakness-intel <https://github.com/jlakness-intel>`_
 - `mgkwill <https://github.com/mgkwill>`_
 
 
