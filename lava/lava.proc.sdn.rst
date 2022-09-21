@@ -1,36 +1,36 @@
-lava.proc.lif
+lava.proc.sdn
 =============
 
 
 
-lava.proc.lif.models
+lava.proc.sdn.models
 --------------------
 
-.. inheritance-diagram:: lava.proc.lif.models
+.. inheritance-diagram:: lava.proc.sdn.models
    :parts: 1
 
 
 
-.. automodule:: lava.proc.lif.models
+.. automodule:: lava.proc.sdn.models
    :members:
    :undoc-members:
    :show-inheritance:
 
-lava.proc.lif.process
+lava.proc.sdn.process
 ---------------------
 
-.. inheritance-diagram:: lava.proc.lif.process
+.. inheritance-diagram:: lava.proc.sdn.process
    :parts: 1
 
 
 
-.. automodule:: lava.proc.lif.process
+.. automodule:: lava.proc.sdn.process
    :members:
    :undoc-members:
    :show-inheritance:
 
 
-.. automodule:: lava.proc.lif
+.. automodule:: lava.proc.sdn
    :members:
    :undoc-members:
    :show-inheritance:

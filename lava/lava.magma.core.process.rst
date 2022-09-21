@@ -1,43 +1,66 @@
-lava.magma.core.process package
-===============================
+lava.magma.core.process
+=======================
 
-Subpackages
------------
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 10
 
    lava.magma.core.process.ports
 
-Submodules
-----------
 
-lava.magma.core.process.interfaces module
------------------------------------------
+
+lava.magma.core.process.interfaces
+----------------------------------
+
+.. inheritance-diagram:: lava.magma.core.process.interfaces
+   :parts: 1
+
+
 
 .. automodule:: lava.magma.core.process.interfaces
    :members:
    :undoc-members:
    :show-inheritance:
 
-lava.magma.core.process.process module
---------------------------------------
+lava.magma.core.process.message\_interface\_enum
+------------------------------------------------
+
+.. inheritance-diagram:: lava.magma.core.process.message_interface_enum
+   :parts: 1
+
+
+
+.. automodule:: lava.magma.core.process.message_interface_enum
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+lava.magma.core.process.process
+-------------------------------
+
+.. inheritance-diagram:: lava.magma.core.process.process
+   :parts: 1
+
+
 
 .. automodule:: lava.magma.core.process.process
    :members:
    :undoc-members:
    :show-inheritance:
 
-lava.magma.core.process.variable module
----------------------------------------
+lava.magma.core.process.variable
+--------------------------------
+
+.. inheritance-diagram:: lava.magma.core.process.variable
+   :parts: 1
+
+
 
 .. automodule:: lava.magma.core.process.variable
    :members:
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
 
 .. automodule:: lava.magma.core.process
    :members:
