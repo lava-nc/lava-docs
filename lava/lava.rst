@@ -1,7 +1,7 @@
 Lava API reference
 ==================
 
-This page gives an overview over all public lava modules, classes and functions. 
+This page gives an overview over all public Lava modules, classes and functions. 
 
 Lava is divided into the sub-packages:
 
@@ -15,7 +15,7 @@ Lava is divided into the sub-packages:
   - :ref:`Magma runtime <lava/lava.magma.runtime:lava.magma.runtime>`
     providing a frontend for execution and control
 
-A fundamental description about Lava and its key componentes can be found in :ref:`Lava Architecture <lava architecture>`.
+Lava's fundamental concepts and key components are described in :ref:`Lava Architecture <lava architecture>`.
 
 Explanatory tutorials and example code can be found in the :ref:`in-depth tutorials <getting_started/in_depth_tutorials:fundamental concepts>` and in the :ref:`End-to-end Tutorial notebooks <getting_started/end_to_end_tutorials:application examples>`. 
 
