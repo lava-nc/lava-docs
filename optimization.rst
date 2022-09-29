@@ -31,7 +31,7 @@ Tutorials
 ---------
 QP Solver
 ^^^^^^^^^
-#. [Solving LASSO.](https://github.com/lava-nc/lava-optimization/tree/main/tutorials/qp/tutorial_01_solving_lasso.ipynb)
+#. `Solving LASSO <https://github.com/lava-nc/lava-optimization/tree/main/tutorials/qp/tutorial_01_solving_lasso.ipynb>`_.
 
 Example
 -------
@@ -83,7 +83,7 @@ Coming up next: CSPSolver
 Requirements
 ------------
 
-#. Working installation of Lava [see Lava installation tutorial.](https://github.com/lava-nc/lava/blob/main/src/lava/tutorials/in_depth/tutorial01_installing_lava.ipynb)
+#. Working installation of Lava `see Lava installation tutorial <https://github.com/lava-nc/lava/blob/main/src/lava/tutorials/in_depth/tutorial01_installing_lava.ipynb>`_.
 
 Setup
 -----
