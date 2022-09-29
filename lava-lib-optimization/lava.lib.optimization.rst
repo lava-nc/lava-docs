@@ -3,7 +3,7 @@ Lava - Optimization
 
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 3
 
    lava.lib.optimization.problems
    lava.lib.optimization.solvers
