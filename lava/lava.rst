@@ -1,5 +1,5 @@
-Lava API reference
-==================
+Lava
+====
 
 This page gives an overview over all public Lava modules, classes and functions. 
 
@@ -25,7 +25,7 @@ Explanatory tutorials and example code can be found in the :ref:`in-depth tutori
 
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 2
 
    lava.magma
    lava.proc
