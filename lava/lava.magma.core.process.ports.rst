@@ -1,6 +1,8 @@
 lava.magma.core.process.ports
 =============================
 
+.. py:module:: lava.magma.core.process.ports
+
 
 
 lava.magma.core.process.ports.exceptions
@@ -38,12 +40,6 @@ lava.magma.core.process.ports.reduce\_ops
 
 
 .. automodule:: lava.magma.core.process.ports.reduce_ops
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.magma.core.process.ports
    :members:
    :undoc-members:
    :show-inheritance:

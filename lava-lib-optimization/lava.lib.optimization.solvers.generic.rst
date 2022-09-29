@@ -1,6 +1,10 @@
 lava.lib.optimization.solvers.generic
 =====================================
 
+.. toctree::
+   :maxdepth: 10
+
+   lava.lib.optimization.solvers.generic.monitoring_processes
 
 
 lava.lib.optimization.solvers.generic.builder

@@ -1,6 +1,8 @@
 lava.magma.runtime.message\_infrastructure
 ==========================================
 
+.. py:module:: lava.magma.runtime.message_infrastructure
+
 
 
 lava.magma.runtime.message\_infrastructure.factory
@@ -51,12 +53,6 @@ lava.magma.runtime.message\_infrastructure.nx
 
 
 .. automodule:: lava.magma.runtime.message_infrastructure.nx
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.magma.runtime.message_infrastructure
    :members:
    :undoc-members:
    :show-inheritance:

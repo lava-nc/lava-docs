@@ -1,6 +1,8 @@
 lava.magma.core.model.sub
 =========================
 
+.. py:module:: lava.magma.core.model.sub
+
 
 
 lava.magma.core.model.sub.model
@@ -12,12 +14,6 @@ lava.magma.core.model.sub.model
 
 
 .. automodule:: lava.magma.core.model.sub.model
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.magma.core.model.sub
    :members:
    :undoc-members:
    :show-inheritance:

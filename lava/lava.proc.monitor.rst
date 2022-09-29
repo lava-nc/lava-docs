@@ -1,6 +1,8 @@
 lava.proc.monitor
 =================
 
+.. py:module:: lava.proc.monitor
+
 
 
 lava.proc.monitor.models
@@ -25,12 +27,6 @@ lava.proc.monitor.process
 
 
 .. automodule:: lava.proc.monitor.process
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.proc.monitor
    :members:
    :undoc-members:
    :show-inheritance:

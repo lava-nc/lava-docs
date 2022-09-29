@@ -1,6 +1,8 @@
 lava.magma.core.sync
 ====================
 
+.. py:module:: lava.magma.core.sync
+
 
 .. toctree::
    :maxdepth: 10
@@ -31,12 +33,6 @@ lava.magma.core.sync.protocol
 
 
 .. automodule:: lava.magma.core.sync.protocol
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.magma.core.sync
    :members:
    :undoc-members:
    :show-inheritance:
