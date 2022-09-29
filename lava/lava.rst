@@ -20,15 +20,13 @@ Lava's fundamental concepts and key components are described in :ref:`Lava Archi
 Explanatory tutorials and example code can be found in the :ref:`in-depth tutorials <getting_started/in_depth_tutorials:fundamental concepts>` and in the :ref:`End-to-end Tutorial notebooks <getting_started/end_to_end_tutorials:application examples>`. 
 
 
+
+.. py:module:: lava
+
+
 .. toctree::
    :maxdepth: 10
 
    lava.magma
    lava.proc
    lava.utils
-
-
-.. automodule:: lava
-   :members:
-   :undoc-members:
-   :show-inheritance:

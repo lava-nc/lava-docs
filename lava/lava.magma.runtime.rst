@@ -1,6 +1,8 @@
 lava.magma.runtime
 ==================
 
+.. py:module:: lava.magma.runtime
+
 
 .. toctree::
    :maxdepth: 10
@@ -32,12 +34,6 @@ lava.magma.runtime.runtime
 
 
 .. automodule:: lava.magma.runtime.runtime
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.magma.runtime
    :members:
    :undoc-members:
    :show-inheritance:

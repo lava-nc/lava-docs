@@ -37,6 +37,19 @@ lava.utils.profiler
    :undoc-members:
    :show-inheritance:
 
+lava.utils.system
+-----------------
+
+.. inheritance-diagram:: lava.utils.system
+   :parts: 1
+
+
+
+.. automodule:: lava.utils.system
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 lava.utils.validator
 --------------------
 
