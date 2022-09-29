@@ -19,6 +19,8 @@ This guide to programming Lava will provide a growing collection of learning res
     ../lava/notebooks/in_depth/tutorial06_hierarchical_processes.ipynb
     ../lava/notebooks/in_depth/tutorial07_remote_memory_access.ipynb
     ../lava/notebooks/end_to_end/tutorial01_mnist_digit_classification.ipynb
-
+    ../lava/notebooks/end_to_end/tutorial02_excitatory_inhibitory_network.ipynb
+    ../lava/notebooks/in_depth/tutorial08_stdp.ipynb
+    ../lava/notebooks/in_depth/tutorial09_custom_learning_rules.ipynb
 
 

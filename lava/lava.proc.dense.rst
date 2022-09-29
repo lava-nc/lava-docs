@@ -1,6 +1,8 @@
 lava.proc.dense
 ===============
 
+.. py:module:: lava.proc.dense
+
 
 
 lava.proc.dense.models
@@ -25,12 +27,6 @@ lava.proc.dense.process
 
 
 .. automodule:: lava.proc.dense.process
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.proc.dense
    :members:
    :undoc-members:
    :show-inheritance:

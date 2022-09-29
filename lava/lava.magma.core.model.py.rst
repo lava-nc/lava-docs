@@ -1,7 +1,22 @@
 lava.magma.core.model.py
 ========================
 
+.. py:module:: lava.magma.core.model.py
 
+
+
+lava.magma.core.model.py.connection
+-----------------------------------
+
+.. inheritance-diagram:: lava.magma.core.model.py.connection
+   :parts: 1
+
+
+
+.. automodule:: lava.magma.core.model.py.connection
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 lava.magma.core.model.py.model
 ------------------------------
@@ -38,12 +53,6 @@ lava.magma.core.model.py.type
 
 
 .. automodule:: lava.magma.core.model.py.type
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.magma.core.model.py
    :members:
    :undoc-members:
    :show-inheritance:

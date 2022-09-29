@@ -16,6 +16,19 @@ lava.proc.io.dataloader
    :undoc-members:
    :show-inheritance:
 
+lava.proc.io.encoder
+--------------------
+
+.. inheritance-diagram:: lava.proc.io.encoder
+   :parts: 1
+
+
+
+.. automodule:: lava.proc.io.encoder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 lava.proc.io.reset
 ------------------
 

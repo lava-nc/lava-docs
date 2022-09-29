@@ -1,6 +1,8 @@
 lava.proc.lif
 =============
 
+.. py:module:: lava.proc.lif
+
 
 
 lava.proc.lif.models
@@ -25,12 +27,6 @@ lava.proc.lif.process
 
 
 .. automodule:: lava.proc.lif.process
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.proc.lif
    :members:
    :undoc-members:
    :show-inheritance:

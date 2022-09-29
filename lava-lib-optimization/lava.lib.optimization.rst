@@ -1,5 +1,5 @@
-lava.lib.optimization
-=====================
+Lava - Optimization
+===================
 
 
 .. toctree::

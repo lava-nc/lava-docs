@@ -1,6 +1,8 @@
 lava.magma.core.process
 =======================
 
+.. py:module:: lava.magma.core.process
+
 
 .. toctree::
    :maxdepth: 10
@@ -8,6 +10,19 @@ lava.magma.core.process
    lava.magma.core.process.ports
 
 
+
+lava.magma.core.process.connection
+----------------------------------
+
+.. inheritance-diagram:: lava.magma.core.process.connection
+   :parts: 1
+
+
+
+.. automodule:: lava.magma.core.process.connection
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 lava.magma.core.process.interfaces
 ----------------------------------
@@ -57,12 +72,6 @@ lava.magma.core.process.variable
 
 
 .. automodule:: lava.magma.core.process.variable
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.magma.core.process
    :members:
    :undoc-members:
    :show-inheritance:

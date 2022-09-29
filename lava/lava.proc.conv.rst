@@ -1,6 +1,8 @@
 lava.proc.conv
 ==============
 
+.. py:module:: lava.proc.conv
+
 
 
 lava.proc.conv.models
@@ -38,12 +40,6 @@ lava.proc.conv.utils
 
 
 .. automodule:: lava.proc.conv.utils
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.proc.conv
    :members:
    :undoc-members:
    :show-inheritance:
