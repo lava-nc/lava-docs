@@ -1,35 +1,47 @@
-lava.magma.core.process.ports package
-=====================================
+lava.magma.core.process.ports
+=============================
 
-Submodules
-----------
 
-lava.magma.core.process.ports.exceptions module
------------------------------------------------
+
+lava.magma.core.process.ports.exceptions
+----------------------------------------
+
+.. inheritance-diagram:: lava.magma.core.process.ports.exceptions
+   :parts: 1
+
+
 
 .. automodule:: lava.magma.core.process.ports.exceptions
    :members:
    :undoc-members:
    :show-inheritance:
 
-lava.magma.core.process.ports.ports module
-------------------------------------------
+lava.magma.core.process.ports.ports
+-----------------------------------
+
+.. inheritance-diagram:: lava.magma.core.process.ports.ports
+   :parts: 1
+
+
 
 .. automodule:: lava.magma.core.process.ports.ports
    :members:
    :undoc-members:
    :show-inheritance:
 
-lava.magma.core.process.ports.reduce\_ops module
-------------------------------------------------
+lava.magma.core.process.ports.reduce\_ops
+-----------------------------------------
+
+.. inheritance-diagram:: lava.magma.core.process.ports.reduce_ops
+   :parts: 1
+
+
 
 .. automodule:: lava.magma.core.process.ports.reduce_ops
    :members:
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
 
 .. automodule:: lava.magma.core.process.ports
    :members:
