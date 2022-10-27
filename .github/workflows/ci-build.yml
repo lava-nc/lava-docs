@@ -1,5 +1,9 @@
 name: Build Docs, Deploy Docs
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main      
+  pull_request:
 permissions:
   contents: write
 
@@ -9,7 +13,7 @@ env:
 jobs:
   build-docs:
     name: Build sphinx docs
-    runs-on: linux-X64-ubuntu
+    runs-on: ubuntu
 
     steps:
     - uses: actions/checkout@v3
