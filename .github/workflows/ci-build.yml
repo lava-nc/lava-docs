@@ -1,23 +1,61 @@
-# name: Run CI
-# on: [push, pull_request]
+name: Build Docs, Deploy Docs
+on: [push, pull_request]
+permissions:
+  contents: write
 
-# jobs:
-#   build-docs:
-#     name: Build sphinx docs
-#     runs-on: ubuntu-latest
+env:
+  VENV: lava-docs-env/*/bin/activate
 
-#     steps:
-#     - uses: actions/checkout@v2
+jobs:
+  build-docs:
+    name: Build sphinx docs
+    runs-on: linux-X64-ubuntu
 
-#     - name: Set up Python 3.9
-#       uses: actions/setup-python@v2
-#       with:
-#         python-version: 3.9
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        lfs: true
 
-#     - name: Install dependencies
-#       run: |
-#         python -m pip install --upgrade pip
-#         pip install "poetry>=1.1.13"
-#     - name: Build docs
-#       run: |
-        
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
+      with:
+        virtualenvs-path: lava-docs-env
+        virtualenvs-create: true
+        virtualenvs-in-project: false
+
+    - name: Install dependencies
+      run: |
+        poetry config virtualenvs.path lava-docs-env
+        poetry update lava-nc
+        poetry update lava-dnf
+        poetry update lava-dl
+        poetry update lava-optimization
+        poetry install --no-interaction --no-root
+    - name: Install lava-docs
+      run: |
+        poetry config virtualenvs.path lava-docs-env
+        poetry install --no-interaction
+
+    - name: Build documentation
+      run: |
+        source lava-docs-env/*/bin/activate
+        mkdir -p html
+        touch html/.nojekyll
+        sphinx-build -b html . _build
+        rm -rf html/*
+        cp -r _build/* html/.
+
+    - name: Deploy documentation
+      if: ${{ github.event_name == 'push' }}
+      uses: JamesIves/github-pages-deploy-action@4
+      with:
+        branch: test
+        repository-name: lava-nc/lava-nc.github.io
+        folder: html
+        token: ${{ secrets.NXBUILD1_TOKEN }}
+        clean-exclude: "CNAME /n _images /n _static /n _sources"
