@@ -47,6 +47,14 @@ jobs:
         rm -rf html/*
         cp -r _build/* html/.
 
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: generated-lava-docs
+        path: |
+          html
+        retention-days: 10
+
     - name: Deploy documentation
       if: ${{ github.event_name == 'push' }}
       uses: JamesIves/github-pages-deploy-action@v4
