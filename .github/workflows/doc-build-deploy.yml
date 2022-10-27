@@ -41,7 +41,9 @@ jobs:
       run: |
         mkdir -p html
         touch html/.nojekyll
+        poetry run python sync_notebook.py
         poetry run sphinx-build -b html . _build
+        poetry run python sync_build_images.py
         rm -rf html/*
         cp -r _build/* html/.
 
