@@ -137,6 +137,7 @@ if __name__ == '__main__':
                     f'{module_path}tutorials/**/{tutorial}',
                     recursive=True,
                 )
+                print(f'src_path is {src_path}')
                 dst_path = dst + tutorial
 
                 # filter src path in key
