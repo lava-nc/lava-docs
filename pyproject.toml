@@ -16,8 +16,10 @@ sphinx-tabs = "^3.2.0"
 numpydoc = "^1.2"
 nbsphinx = "^0.8.8"
 jupyterlab = "^3.3.0"
-lava-nc = { git = "https://github.com/lava-nc/lava.git", branch = "main", tag = "v0.5.0" }
-lava-dl = { git = "https://github.com/lava-nc/lava-dl.git", branch = "main", tag = "v0.3.0" }
+lava-nc = { git = "https://github.com/lava-nc/lava.git", branch = "main"}
+lava-dl = { git = "https://github.com/lava-nc/lava-dl.git", branch = "main"}
+lava-dnf = { git = "https://github.com/lava-nc/lava-dnf.git", branch = "main"}
+lava-optimization = { git = "https://github.com/lava-nc/lava-optimization.git", branch = "main"}
 
 [tool.poetry.dev-dependencies]
 
