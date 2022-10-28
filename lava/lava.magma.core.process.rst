@@ -50,6 +50,19 @@ lava.magma.core.process.message\_interface\_enum
    :undoc-members:
    :show-inheritance:
 
+lava.magma.core.process.neuron
+------------------------------
+
+.. inheritance-diagram:: lava.magma.core.process.neuron
+   :parts: 1
+
+
+
+.. automodule:: lava.magma.core.process.neuron
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 lava.magma.core.process.process
 -------------------------------
 
