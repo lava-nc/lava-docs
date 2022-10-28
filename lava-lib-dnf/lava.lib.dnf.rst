@@ -1,7 +1,15 @@
-Lava DNF
-===========
+Lava - Dynamic Neural Fields
+============================
 
-This is the DNF library of Lava.
+Lava-DNF is a library within the Lava software framework. It provides
+Lava Processes and other software infrastructure to build architectures
+composed of Dynamic Neural Fields (DNFs). In particular, it provides
+functions to generate connectivity patterns common to DNF architectures.
+
+DNFs are neural attractor networks that generate
+stabilized activity patterns in recurrently connected populations of neurons.
+These activity patterns form the basis of neural representations, decision
+making, working memory, and learning.
 
 .. py:module:: lava.lib.dnf
 
