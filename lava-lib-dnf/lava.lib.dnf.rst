@@ -20,4 +20,5 @@ making, working memory, and learning.
    lava.lib.dnf.connect
    lava.lib.dnf.kernels
    lava.lib.dnf.operations
+   lava.lib.dnf.inputs
    lava.lib.dnf.utils
