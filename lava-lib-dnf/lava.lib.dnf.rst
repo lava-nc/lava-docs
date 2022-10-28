@@ -12,4 +12,5 @@ This is the DNF library of Lava.
    lava.lib.dnf.connect
    lava.lib.dnf.kernels
    lava.lib.dnf.operations
+   lava.lib.dnf.inputs
    lava.lib.dnf.utils

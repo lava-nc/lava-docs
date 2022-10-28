@@ -7,9 +7,4 @@ Lava - Optimization
 
    lava.lib.optimization.problems
    lava.lib.optimization.solvers
-
-
-.. automodule:: lava.lib.optimization
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   lava.lib.optimization.utils
