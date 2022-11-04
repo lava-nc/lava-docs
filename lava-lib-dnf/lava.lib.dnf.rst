@@ -15,7 +15,7 @@ making, working memory, and learning.
 
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 2
 
    lava.lib.dnf.connect
    lava.lib.dnf.kernels

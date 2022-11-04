@@ -2,6 +2,6 @@ Lava Optimization API reference
 ===============================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    lava
