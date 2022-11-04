@@ -5,7 +5,7 @@ lava.lib.optimization.solvers
 
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 3
 
    lava.lib.optimization.solvers.bayesian
    lava.lib.optimization.solvers.generic

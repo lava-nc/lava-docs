@@ -5,7 +5,7 @@ lava.lib.optimization.problems
 
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 3
 
    lava.lib.optimization.problems.bayesian
 

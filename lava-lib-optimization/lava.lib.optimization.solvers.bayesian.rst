@@ -1,6 +1,8 @@
 lava.lib.optimization.solvers.bayesian
 ======================================
 
+.. py:module:: lava.lib.optimization.solvers.bayesian
+
 
 
 lava.lib.optimization.solvers.bayesian.models
@@ -38,12 +40,6 @@ lava.lib.optimization.solvers.bayesian.solver
 
 
 .. automodule:: lava.lib.optimization.solvers.bayesian.solver
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.lib.optimization.solvers.bayesian
    :members:
    :undoc-members:
    :show-inheritance:

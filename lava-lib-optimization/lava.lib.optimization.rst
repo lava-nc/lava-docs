@@ -1,6 +1,8 @@
 Lava - Optimization
 ===================
 
+.. py:module:: lava.lib.optimization
+
 
 .. toctree::
    :maxdepth: 3

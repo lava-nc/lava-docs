@@ -7,7 +7,7 @@ The Lava process library contains a collection of commonly used Processes and Pr
 
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 2
 
    lava.proc.conv
    lava.proc.dense

@@ -5,7 +5,7 @@ lava.lib.optimization.solvers.generic
 
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 3
 
    lava.lib.optimization.solvers.generic.cost_integrator
    lava.lib.optimization.solvers.generic.read_gate

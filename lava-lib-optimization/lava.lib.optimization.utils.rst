@@ -1,9 +1,11 @@
 lava.lib.optimization.utils
 ===========================
 
+.. py:module:: lava.lib.optimization.utils
+
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 3
 
    lava.lib.optimization.utils.generators
 
@@ -18,12 +20,6 @@ lava.lib.optimization.utils.solver\_tuner
 
 
 .. automodule:: lava.lib.optimization.utils.solver_tuner
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.lib.optimization.utils
    :members:
    :undoc-members:
    :show-inheritance:
