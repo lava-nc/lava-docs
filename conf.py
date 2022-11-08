@@ -12,7 +12,8 @@ extensions = [
     "sphinx.ext.mathjax",
     "nbsphinx",
     "sphinx.ext.graphviz",
-    "sphinx.ext.inheritance_diagram"
+    "sphinx.ext.inheritance_diagram",
+    "sphinx_autodoc_typehints"
 ]
 
 mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
