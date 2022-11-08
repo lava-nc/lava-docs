@@ -1,10 +1,13 @@
 lava.magma.core
 ===============
 
+.. py:module:: lava.magma.core
+
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 2
 
+   lava.magma.core.learning
    lava.magma.core.model
    lava.magma.core.process
    lava.magma.core.sync
@@ -59,12 +62,6 @@ lava.magma.core.run\_configs
 
 
 .. automodule:: lava.magma.core.run_configs
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.magma.core
    :members:
    :undoc-members:
    :show-inheritance:

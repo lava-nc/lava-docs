@@ -1,6 +1,8 @@
 lava.proc.sdn
 =============
 
+.. py:module:: lava.proc.sdn
+
 
 
 lava.proc.sdn.models
@@ -25,12 +27,6 @@ lava.proc.sdn.process
 
 
 .. automodule:: lava.proc.sdn.process
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.proc.sdn
    :members:
    :undoc-members:
    :show-inheritance:

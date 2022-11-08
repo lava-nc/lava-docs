@@ -10,16 +10,12 @@ Magma is the sub-package of Lava providing the main components of Lava
   - :ref:`Magma runtime <lava/lava.magma.runtime:lava.magma.runtime.runtime>`
     providing a control interface for the user
 
+.. py:module:: lava.magma
+
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 2
 
    lava.magma.compiler
    lava.magma.core
    lava.magma.runtime
-
-
-.. automodule:: lava.magma
-   :members:
-   :undoc-members:
-   :show-inheritance:

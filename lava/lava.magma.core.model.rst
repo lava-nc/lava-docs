@@ -1,9 +1,11 @@
 lava.magma.core.model
 =====================
 
+.. py:module:: lava.magma.core.model
+
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 2
 
    lava.magma.core.model.py
    lava.magma.core.model.sub
@@ -45,12 +47,6 @@ lava.magma.core.model.spike\_type
 
 
 .. automodule:: lava.magma.core.model.spike_type
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.magma.core.model
    :members:
    :undoc-members:
    :show-inheritance:

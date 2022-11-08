@@ -5,7 +5,7 @@ lava.utils
 
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 2
 
    lava.utils.dataloader
 
@@ -33,6 +33,19 @@ lava.utils.profiler
 
 
 .. automodule:: lava.utils.profiler
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+lava.utils.system
+-----------------
+
+.. inheritance-diagram:: lava.utils.system
+   :parts: 1
+
+
+
+.. automodule:: lava.utils.system
    :members:
    :undoc-members:
    :show-inheritance:

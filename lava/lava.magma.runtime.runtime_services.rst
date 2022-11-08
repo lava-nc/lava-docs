@@ -1,9 +1,11 @@
 lava.magma.runtime.runtime\_services
 ====================================
 
+.. py:module:: lava.magma.runtime.runtime_services
+
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 2
 
    lava.magma.runtime.runtime_services.channel_broker
 
@@ -44,12 +46,6 @@ lava.magma.runtime.runtime\_services.runtime\_service
 
 
 .. automodule:: lava.magma.runtime.runtime_services.runtime_service
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.magma.runtime.runtime_services
    :members:
    :undoc-members:
    :show-inheritance:

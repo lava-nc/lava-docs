@@ -1,6 +1,8 @@
 lava.magma.runtime.runtime\_services.channel\_broker
 ====================================================
 
+.. py:module:: lava.magma.runtime.runtime_services.channel_broker
+
 
 
 lava.magma.runtime.runtime\_services.channel\_broker.channel\_broker
@@ -12,12 +14,6 @@ lava.magma.runtime.runtime\_services.channel\_broker.channel\_broker
 
 
 .. automodule:: lava.magma.runtime.runtime_services.channel_broker.channel_broker
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.magma.runtime.runtime_services.channel_broker
    :members:
    :undoc-members:
    :show-inheritance:

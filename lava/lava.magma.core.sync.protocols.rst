@@ -1,6 +1,8 @@
 lava.magma.core.sync.protocols
 ==============================
 
+.. py:module:: lava.magma.core.sync.protocols
+
 
 
 lava.magma.core.sync.protocols.async\_protocol
@@ -25,12 +27,6 @@ lava.magma.core.sync.protocols.loihi\_protocol
 
 
 .. automodule:: lava.magma.core.sync.protocols.loihi_protocol
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-.. automodule:: lava.magma.core.sync.protocols
    :members:
    :undoc-members:
    :show-inheritance:
