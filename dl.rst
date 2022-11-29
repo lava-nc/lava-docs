@@ -35,7 +35,7 @@ The library presently consists of
 
 Lava-dl also has the following external, fully compatible, plugin.
 
-1. `lava.lib.dl.decolle <https://github.com/kclip/lava-decolle>`__ for training Deep SNNs with local learning and surrogate gradients. This extension is the port of `DECOLLE <https://github.com/nmi-lab/decolle-public>`__ learning repo to be fully compatible to lava-dl training tools. Refer `here <https://github.com/kclip/lava-decolle>`__ for the detailed description of the extension, examples and tutorials.:
+1. `lava.lib.dl.decolle <https://github.com/kclip/lava-decolle>`__ for training Deep SNNs with local learning and surrogate gradients. This extension is an implementation of `DECOLLE <https://github.com/nmi-lab/decolle-public>`__ learning repo to be fully compatible to lava-dl training tools. Refer `here <https://github.com/kclip/lava-decolle>`__ for the detailed description of the extension, examples and tutorials.:
     
     J . Kaiser, H. Mostafa, and E. Neftci, `Synaptic Plasticity Dynamics for Deep Continuous Local Learning (DECOLLE).` pp 424,  Frontiers in Neuroscience 2020.
 
