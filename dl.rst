@@ -31,10 +31,13 @@ The library presently consists of
 1. ``lava.lib.dl.slayer`` for natively training Deep Event-Based
    Networks.
 2. ``lava.lib.dl.bootstrap`` for training rate coded SNNs.
+3. ``lava.lib.dl.netx`` for training and deployment of event-based deep neural networks on traditional as well as neuromorphic backends.
 
-Coming soon to the library 1. ``lava.lib.dl.netx`` for training and
-deployment of event-based deep neural networks on traditional as well as
-neuromorphic backends.
+Lava-dl also has the following external, fully compatible, plugin.
+
+1. `lava.lib.dl.decolle <https://github.com/kclip/lava-decolle>`__ for training Deep SNNs with local learning and surrogate gradients. This extension is the port of `DECOLLE <https://github.com/nmi-lab/decolle-public>`__ learning repo to be fully compatible to lava-dl training tools. Refer `here <https://github.com/kclip/lava-decolle>`__ for the detailed description of the extension, examples and tutorials.:
+    
+    J . Kaiser, H. Mostafa, and E. Neftci, `Synaptic Plasticity Dynamics for Deep Continuous Local Learning (DECOLLE).` pp 424,  Frontiers in Neuroscience 2020.
 
 More tools will be added in the future.
 
@@ -44,7 +47,7 @@ Lava-DL Workflow
 .. raw:: html
 
    <p align="center">
-   <img src="https://user-images.githubusercontent.com/29907126/140595634-a97886c6-280a-4771-830b-ae47a9324612.png" alt="Drawing" style="max-height: 400px;"/>
+   <img src="https://user-images.githubusercontent.com/29907126/204448416-1c222fa9-822a-4fd7-a2b8-eebcabf7316d.png" alt="Drawing" style="max-height: 400px;"/>
    </p>
 
 Typical Lava-DL workflow consists of: 
