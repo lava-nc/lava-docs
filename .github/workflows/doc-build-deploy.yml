@@ -39,7 +39,7 @@ jobs:
 
     - name: Build documentation
       run: |
-        -x
+        set -x
         mkdir -p html
         touch html/.nojekyll
         source .venv/bin/activate
