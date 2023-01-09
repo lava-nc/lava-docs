@@ -39,11 +39,13 @@ jobs:
 
     - name: Build documentation
       run: |
+        -x
         mkdir -p html
         touch html/.nojekyll
-        poetry run python sync_notebook.py
-        poetry run sphinx-build -b html . _build
-        poetry run python sync_build_images.py
+        source .venv/bin/activate
+        python -vvvv sync_notebook.py
+        sphinx-build -b html . _build
+        python -vvvv sync_build_images.py
         rm -rf html/*
         cp -r _build/* html/.
 
