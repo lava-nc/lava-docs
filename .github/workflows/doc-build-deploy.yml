@@ -42,7 +42,7 @@ jobs:
         set -x
         mkdir -p html
         touch html/.nojekyll
-        source .venv/bin/activate
+        source $(poetry env info --path)/bin/activate
         python -vvvv sync_notebook.py
         sphinx-build -b html . _build
         python -vvvv sync_build_images.py
