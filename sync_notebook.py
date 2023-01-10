@@ -124,9 +124,13 @@ if __name__ == '__main__':
         key = tutorials['module']
         if key in module_dict.keys():
             module = module_dict[key]
+            print(f'module is {module}')
             module_path = module.__path__[0]
+            print(f'module_path  is {module_path }')
             module_path = module_path.split('src/lava')[0]
+            print(f'module_path is {module_path}')
             dst = tutorials['dst']
+            print(f'dst is {dst}')
             if 'ignore' in tutorials.keys():
                 ignore = tutorials['ignore']
             else:
