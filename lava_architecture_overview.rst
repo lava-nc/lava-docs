@@ -13,7 +13,7 @@ Key attributes
 - **Cross-platform:** Lava supports flexible cross-platform execution of computational processes on novel neuromorphic architectures such as Intel Loihi as well as conventional CPU/GPU architectures. It is flexible in the dual sense of allowing the same computational processes to execute on different platforms while also allowing different processes to execute and interact across architectures through message passing.
 - **Modular and composable:** Lava's computational processes follow a consistent architecture, to make them interoperable which allows to compose modular systems from other computational processes.
 - **Extensible:** Lava is open and extensible to support use cases of increasing breadth over time and to interact with other third party frameworks such as TensorFlow, ROS, Brian and more.
-- **Trainable:** Lave comes with powerful training algorithms to train models offline and continually online in real-time in the future.
+- **Trainable:** Lava comes with powerful training algorithms to train models offline and continually online in real-time in the future.
 - **Accessible:** Lava provides an intuitive Python API to quickly build and execute models on distributed parallel systems.
 
 Why do we need Lava?
