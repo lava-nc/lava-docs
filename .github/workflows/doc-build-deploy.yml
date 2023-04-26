@@ -33,6 +33,7 @@ jobs:
         poetry update lava-dl
         poetry update lava-optimization
         poetry install --no-interaction --no-root
+        sudo apt-get install pandoc -y
     - name: Install lava-docs
       run: |
         poetry install --no-interaction
