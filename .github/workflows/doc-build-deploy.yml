@@ -45,7 +45,7 @@ jobs:
         source $(poetry env info --path)/bin/activate
         python -vvvv sync_notebook.py
         sphinx-build -b html . _build
-        python -vvvv sync_build_images.py
+        python sync_build_images.py
         rm -rf html/*
         cp -r _build/* html/.
 
