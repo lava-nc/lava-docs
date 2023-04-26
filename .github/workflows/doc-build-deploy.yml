@@ -62,7 +62,7 @@ jobs:
       if: ${{ github.event_name == 'push' }}
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: test
+        branch: main
         repository-name: lava-nc/lava-nc.github.io
         folder: html
         token: ${{ secrets.NXBUILD1_TOKEN }}
