@@ -1,3 +1,7 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.poetry]
 name = "lava-docs"
 version = "0.3.0"
@@ -10,19 +14,16 @@ license = "Lava uses multiple licenses and is licensed under BSD-3-Clause or LGP
 [tool.poetry.dependencies]
 python = ">=3.8, <3.11"
 
-Sphinx = "^4.4.0"
-sphinx-rtd-theme = "1.0.0"
-sphinx-tabs = "^3.2.0"
+sphinx = { extras = ["toml"], version = "^4.4.0" }
+sphinx-tabs = { extras = ["toml"], version = "^3.2.0" }
+sphinx_rtd_theme = { extras = ["toml"], version = "^1.0.0" }
 numpydoc = "^1.2"
 nbsphinx = "^0.8.8"
 jupyterlab = "^3.3.0"
-lava-nc = { git = "https://github.com/lava-nc/lava.git", branch = "main"}
-lava-dl = { git = "https://github.com/lava-nc/lava-dl.git", branch = "main"}
-lava-dnf = { git = "https://github.com/lava-nc/lava-dnf.git", branch = "main"}
-lava-optimization = { git = "https://github.com/lava-nc/lava-optimization.git", branch = "main"}
+lava-nc = { git = "https://github.com/lava-nc/lava.git", tag = "v0.7.0"}
+
+lava-dl = { git = "https://github.com/lava-nc/lava-dl.git", tag = "v0.3.3"}
+lava-dnf = { git = "https://github.com/lava-nc/lava-dnf.git", tag = "v0.1.3"}
+lava-optimization = { git = "https://github.com/lava-nc/lava-optimization.git", tag = "v0.2.4"}
 
 [tool.poetry.dev-dependencies]
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
