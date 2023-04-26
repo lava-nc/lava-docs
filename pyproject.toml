@@ -21,6 +21,8 @@ sphinx_autodoc_typehints = "^1.23.0"
 numpydoc = "^1.2"
 nbsphinx = "^0.8.8"
 jupyterlab = "^3.3.0"
+pandoc = "^2.3"
+
 lava-nc = { git = "https://github.com/lava-nc/lava.git", tag = "v0.7.0", develop = true}
 
 lava-dl = { git = "https://github.com/lava-nc/lava-dl.git", tag = "v0.3.3", develop = true}
