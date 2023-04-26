@@ -1,4 +1,4 @@
-lava.utils
+Lava Utils
 ==========
 
 .. py:module:: lava.utils

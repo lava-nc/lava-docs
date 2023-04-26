@@ -16,5 +16,7 @@ The Lava process library contains a collection of commonly used Processes and Pr
    lava.proc.lif
    lava.proc.monitor
    lava.proc.receiver
+   lava.proc.rf
+   lava.proc.rf_iz
    lava.proc.sdn
    lava.proc.spiker
