@@ -1,11 +1,11 @@
-lava.utils
+Lava Utils
 ==========
 
 .. py:module:: lava.utils
 
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 2
 
    lava.utils.dataloader
 

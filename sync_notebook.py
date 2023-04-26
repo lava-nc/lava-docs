@@ -7,8 +7,8 @@ module_dict = {}
 
 try:
     import lava
-    import lava.proc
-    module_dict.update({'lava': lava.proc})  # this must be unique path
+    import lava.magma.compiler.subcompilers.py
+    module_dict.update({'lava': lava.magma.compiler.subcompilers.py})  # this must be unique path
 except ModuleNotFoundError:
     print(f"Failed importing {lava}. It's dependencies will be excluded.")
 
@@ -72,13 +72,13 @@ tutorial_list = [  # list of all notebooks to sync
             'pilotnet_sdnn': 'PilotNet SDNN Inference',
         },
     },
-    {
-        'module': 'optim',
-        'dst': 'lava/notebooks/',
-        'tutorials': {
-            '': 'QP solver tutorials',
-        },
-    },
+    #{
+    #    'module': 'optim',
+    #    'dst': 'lava/notebooks/',
+    #    'tutorials': {
+    #        '': 'QP solver tutorials',
+    #    },
+    #},
 ]
 
 
@@ -136,6 +136,9 @@ if __name__ == '__main__':
             else:
                 ignore = []
             os.makedirs(dst, exist_ok=True)
+            
+            print("copy tutorials", tutorials['tutorials'])
+
             for tutorial, header in tutorials['tutorials'].items():
                 src_path = glob.glob(
                     f'{module_path}tutorials/**/{tutorial}',
@@ -161,7 +164,7 @@ if __name__ == '__main__':
                             f'search path: '
                             f'{module_path}tutorials/**/{tutorial}'
                         )
-                        raise Exception('Module not found! Check your config')
+                        raise Exception(f'Module {module_path} {tutorial} not found! Check your config')
                     else:
                         print(f'{key=}')
                         print(f'{filter_path=}')

@@ -5,7 +5,7 @@ lava.magma.core
 
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 2
 
    lava.magma.core.learning
    lava.magma.core.model
@@ -13,6 +13,19 @@ lava.magma.core
    lava.magma.core.sync
 
 
+
+lava.magma.core.callback\_fx
+----------------------------
+
+.. inheritance-diagram:: lava.magma.core.callback_fx
+   :parts: 1
+
+
+
+.. automodule:: lava.magma.core.callback_fx
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 lava.magma.core.decorator
 -------------------------

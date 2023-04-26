@@ -9,13 +9,14 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx_rtd_theme",
     'sphinx.ext.imgmath',
-    "sphinx.ext.mathjax",
     "nbsphinx",
     "sphinx.ext.graphviz",
-    "sphinx.ext.inheritance_diagram"
+    "sphinx.ext.inheritance_diagram",
+    "sphinx_autodoc_typehints"
 ]
 
-mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+imgmath_image_format = 'svg'
+imgmath_embed = True
 
 inheritance_graph_attrs = dict(rankdir="TB", size='""')
 autosectionlabel_prefix_document = True
