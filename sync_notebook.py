@@ -124,27 +124,23 @@ if __name__ == '__main__':
         key = tutorials['module']
         if key in module_dict.keys():
             module = module_dict[key]
-            print(f'module is {module}')
             module_path = module.__path__[0]
-            print(f'module_path  is {module_path }')
-            module_path = module_path.split('src/lava')[0]
-            print(f'module_path is {module_path}')
+            if "magma" in module_path:
+                module_path = module_path.split('src/lava/magma')[0]
+            else:
+                module_path = module_path.split('src/lava/lib')[0]
             dst = tutorials['dst']
-            print(f'dst is {dst}')
             if 'ignore' in tutorials.keys():
                 ignore = tutorials['ignore']
             else:
                 ignore = []
             os.makedirs(dst, exist_ok=True)
-            
-            print("copy tutorials", tutorials['tutorials'])
 
             for tutorial, header in tutorials['tutorials'].items():
                 src_path = glob.glob(
                     f'{module_path}tutorials/**/{tutorial}',
                     recursive=True,
                 )
-                print(f'src_path is {src_path}')
                 dst_path = dst + tutorial
 
                 # filter src path in key
@@ -155,8 +151,11 @@ if __name__ == '__main__':
                 src_path = filter_path
                 if len(src_path) == 1:
                     src_path = src_path[0]
-                    print(f'copying from {src_path} to {dst_path}')
-                    copy_tree(src_path, dst_path, ignore=ignore_patterns('data', 'Logs'), dirs_exist_ok=True)
+                    copy_tree(src_path,
+                              dst_path,
+                              ignore=ignore_patterns('data',
+                                                     'Logs'),
+                              dirs_exist_ok=True)
                     create_nb_rst(dst_path, tutorial+'.rst', header, ignore)
                 else:
                     if len(src_path) == 0:
