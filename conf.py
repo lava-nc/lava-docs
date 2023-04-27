@@ -15,6 +15,7 @@ extensions = [
     "sphinx_autodoc_typehints"
 ]
 
+graphviz_output_format = 'svg'
 imgmath_image_format = 'svg'
 imgmath_embed = True
 
