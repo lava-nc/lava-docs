@@ -4,8 +4,15 @@ on:
     branches:
       - main      
   pull_request:
+  workflow_dispatch:
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build-docs:
@@ -66,4 +73,9 @@ jobs:
         repository-name: lava-nc/lava-nc.github.io
         folder: html
         token: ${{ secrets.NXBUILD1_TOKEN }}
-        clean-exclude: "CNAME /n _images /n _static /n _sources"
+        clean-exclude: |
+          CNAME
+          .nojekyll
+          _images
+          _static
+          _sources
