@@ -113,7 +113,6 @@ def create_nb_rst(folder_path, rst_name, header, ignore=[]):
             continue
         rst_text += f'    {nb_name}{os.linesep}'
 
-
     print('Creating ' + folder_path + '/' + rst_name)
     with open(folder_path + '/' + rst_name, 'wt') as f:
         f.write(rst_text)
@@ -153,6 +152,7 @@ if __name__ == '__main__':
                 print(f'copying from {src_path} to {dst_path}')
                 if len(src_path) == 1:
                     src_path = src_path[0]
+                    print(f'copying from {src_path} to {dst_path}')
                     copy_tree(src_path,
                               dst_path,
                               ignore=ignore_patterns('data',
@@ -165,7 +165,8 @@ if __name__ == '__main__':
                             f'search path: '
                             f'{module_path}tutorials/**/{tutorial}'
                         )
-                        raise Exception(f'Module {module_path} {tutorial} not found! Check your config')
+                        raise Exception(f'Module {module_path} {tutorial} \
+                                        not found! Check your config')
                     else:
                         print(f'{key=}')
                         print(f'{filter_path=}')
