@@ -1,0 +1,69 @@
+name: Build Docs, Deploy Docs
+on:
+  push:
+    branches:
+      - main      
+  pull_request:
+permissions:
+  contents: write
+
+jobs:
+  build-docs:
+    name: Build sphinx docs
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        lfs: true
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install Poetry
+      run: |
+        pipx install poetry>=1.2.1
+
+    - name: Install dependencies
+      run: |
+        poetry update lava-nc
+        poetry update lava-dnf
+        poetry update lava-dl
+        poetry update lava-optimization
+        poetry install --no-interaction --no-root
+        sudo apt-get install pandoc -y
+    - name: Install lava-docs
+      run: |
+        poetry install --no-interaction
+
+    - name: Build documentation
+      run: |
+        set -x
+        mkdir -p html
+        touch html/.nojekyll
+        source $(poetry env info --path)/bin/activate
+        python sync_notebook.py
+        sphinx-build -b html . _build
+        python sync_build_images.py
+        rm -rf html/*
+        cp -r _build/* html/.
+
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: generated-lava-docs
+        path: |
+          html
+        retention-days: 10
+
+    - name: Deploy documentation
+      if: ${{ github.event_name == 'push' }}
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: main
+        repository-name: lava-nc/lava-nc.github.io
+        folder: html
+        token: ${{ secrets.NXBUILD1_TOKEN }}
+        clean-exclude: "CNAME /n _images /n _static /n _sources"
