@@ -136,6 +136,7 @@ if __name__ == '__main__':
                 ignore = []
             os.makedirs(dst, exist_ok=True)
 
+            print("copy tutorials", tutorials['tutorials'])
             for tutorial, header in tutorials['tutorials'].items():
                 src_path = glob.glob(
                     f'{module_path}tutorials/**/{tutorial}',
@@ -149,6 +150,7 @@ if __name__ == '__main__':
                     if key in p:
                         filter_path.append(p)
                 src_path = filter_path
+                print(f'copying from {src_path} to {dst_path}')
                 if len(src_path) == 1:
                     src_path = src_path[0]
                     copy_tree(src_path,
