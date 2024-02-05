@@ -20,7 +20,7 @@ sphinx_rtd_theme = { extras = ["toml"], version = "^1.0.0" }
 sphinx_autodoc_typehints = "^1.23.0"
 numpydoc = "^1.2"
 nbsphinx = "^0.8.8"
-jupyterlab = "^3.3.0"
+jupyterlab = "^3.6.7"
 pandoc = "^2.3"
 
 lava-nc = { git = "https://github.com/lava-nc/lava.git", tag = "v0.9.0", develop = true}
