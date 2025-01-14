@@ -12,7 +12,7 @@ authors = [
 license = "Lava uses multiple licenses and is licensed under BSD-3-Clause or LGPL-2.1-or-later"
 
 [tool.poetry.dependencies]
-python = ">=3.8, <3.11"
+python = ">=3.10, <3.11"
 
 sphinx = { extras = ["toml"], version = "^6.2.1" }
 sphinx-tabs = { extras = ["toml"], version = "^3.4.1" }
@@ -22,10 +22,10 @@ numpydoc = "^1.2"
 nbsphinx = "^0.8.8"
 pandoc = "^2.3"
 
-lava-nc = { git = "https://github.com/lava-nc/lava.git", tag = "v0.9.0", develop = true}
+lava-nc = { git = "https://github.com/lava-nc/lava.git", tag = "v0.10.0", develop = true}
 
-lava-dl = { git = "https://github.com/lava-nc/lava-dl.git", tag = "v0.5.0", develop = true}
-lava-dnf = { git = "https://github.com/lava-nc/lava-dnf.git", tag = "v0.2.0", develop = true}
-lava-optimization = { git = "https://github.com/lava-nc/lava-optimization.git", tag = "v0.4.0", develop = true}
+lava-dl = { git = "https://github.com/lava-nc/lava-dl.git", tag = "v0.6.0", develop = true}
+lava-dnf = { git = "https://github.com/lava-nc/lava-dnf.git", tag = "v0.3.0", develop = true}
+lava-optimization = { git = "https://github.com/lava-nc/lava-optimization.git", tag = "v0.5.0", develop = true}
 
 [tool.poetry.dev-dependencies]
