@@ -44,7 +44,7 @@ jobs:
         sudo apt-get install pandoc -y
     - name: Install lava-docs
       run: |
-        poetry install --no-interaction
+        poetry install --no-interaction --no-root
 
     - name: Build documentation
       run: |
