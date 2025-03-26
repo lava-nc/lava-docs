@@ -22,10 +22,10 @@ numpydoc = "^1.2"
 nbsphinx = "^0.8.8"
 pandoc = "^2.3"
 
-lava-nc = { git = "https://github.com/lava-nc/lava.git", tag = "v0.10.0", develop = true}
+lava-nc = { git = "https://github.com/lava-nc/lava.git", branch = "main", develop = true }
 
-lava-dl = { git = "https://github.com/lava-nc/lava-dl.git", tag = "v0.6.0", develop = true}
-lava-dnf = { git = "https://github.com/lava-nc/lava-dnf.git", tag = "v0.3.0", develop = true}
-lava-optimization = { git = "https://github.com/lava-nc/lava-optimization.git", tag = "v0.5.0", develop = true}
+lava-dl = { git = "https://github.com/lava-nc/lava-dl.git", branch = "main", develop = true }
+lava-dnf = { git = "https://github.com/lava-nc/lava-dnf.git", branch = "main", develop = true }
+lava-optimization = { git = "https://github.com/lava-nc/lava-optimization.git", branch = "main", develop = true }
 
 [tool.poetry.dev-dependencies]
